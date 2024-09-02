@@ -1,0 +1,61 @@
+.objetivo {
+    width: 100%;
+    height: auto;
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px 0px;
+}
+
+.objetivo .titulo {
+    color: var(--azul-claro);
+    font-size: 1.8em;
+    width: 250px;
+    text-align: center;
+}
+
+
+.objetivo .linha {
+    position: relative;
+    width: 220px;
+    height: 15px;
+}
+
+.objetivo .linha .esquerda{
+    background-color: var(--azul-claro);
+    width: 60%;
+    height: 2px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.objetivo .linha .direita{
+    background-color: var(--azul-escuro);
+    width: 60%;
+    height: 2px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.objetivo .paragrafo {
+    max-width: 950px;
+    width: 90%;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 2.2em;
+}
+
+@media(max-width: 500px) {
+    .objetivo .titulo {
+        font-size: 1.5em;
+    }
+
+    .objetivo .paragrafo {
+        font-size: 0.85em;
+    }
+    
+}

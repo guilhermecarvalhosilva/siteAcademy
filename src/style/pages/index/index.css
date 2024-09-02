@@ -1,3 +1,6 @@
 @import '../../global/global.css';
 @import './partials/header.css';
-@import './partials/main.css';
+@import './partials/principal.css';
+@import './partials/objetivo.css';
+@import './partials/praticas.css';
+@import './partials/footer.css';

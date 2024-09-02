@@ -1,0 +1,19 @@
+.rodape {
+    background-color: var(--azul-escuro);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape .imagem {
+    max-width: 500px;
+    width: 80%;
+    height: auto;
+}
+
+.rodape .imagem .imagem-item {
+    width: 100%;
+}
