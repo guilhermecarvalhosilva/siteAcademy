@@ -1,0 +1,51 @@
+.principios {
+    background-color: var(--azul-principios);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px 30px;
+    padding: 35px 0px;
+    width: 100%;
+}
+
+.principios .principio-item {
+    max-width: 300px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px 0px;
+}
+
+.principios .principio-item .missao {
+    width: 156px;
+    height: 100px;
+}
+
+
+.principios .principio-item .visao {
+    width: 91px;
+    height: 100px;
+}
+
+
+.principios .principio-item .valores {
+    width: 110px;
+    height: 100px;
+}
+
+.principios .principio-item .titulo {
+    color: var(--azul-escuro);
+    font-size: 1.5em;
+    width: 95%;
+    text-align: center;
+}
+
+.principios .principio-item .paragrafo {
+    font-size: 0.75em;
+    width: 95%;
+    text-align: center;
+}
+
+

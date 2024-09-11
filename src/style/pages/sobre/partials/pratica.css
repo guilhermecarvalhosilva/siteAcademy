@@ -1,0 +1,39 @@
+.pratica {
+    width: 100%;
+    height: auto;
+    padding: 50px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px 0px;
+}
+
+.pratica .pratica-titulo {
+    color: var(--azul-escuro);
+    font-size: 2em;
+    width: 95%;
+    text-align: center;
+}
+
+.pratica .pratica-imagens {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 95%;
+    gap: 15px 20px;
+}
+
+.pratica .pratica-imagens .pratica-card{
+    max-width: 370px;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pratica .pratica-imagens .pratica-card .card-imagem{
+    width: 100%;
+}
