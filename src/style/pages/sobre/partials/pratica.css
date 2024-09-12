@@ -1,7 +1,8 @@
 .pratica {
+    position: relative;
     width: 100%;
     height: auto;
-    padding: 50px 0px 20px 0px;
+    padding: 30px 0px 20px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,8 +21,9 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     width: 95%;
-    gap: 15px 20px;
+    gap: 30px 20px;
 }
 
 .pratica .pratica-imagens .pratica-card{
@@ -36,4 +38,56 @@
 
 .pratica .pratica-imagens .pratica-card .card-imagem{
     width: 100%;
+}
+
+@media(max-width: 820px) {
+    .pratica .pratica-imagens {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        max-width: 370px;
+        width: 95%;
+    }
+    
+    .pratica .pratica-imagens .pratica-card{
+        width: 100%;
+        display: none;
+    }
+
+    .pratica .pratica-imagens .pratica-card.ativo{
+        display: flex;
+    }
+    
+    .pratica .pratica-imagens .pratica-card .card-imagem{
+        width: 100%;
+    }
+
+    .pratica .pratica-card-botao {
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px 20px;
+    }
+
+    .pratica .pratica-card-botao .botao-card{
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: none;   
+        background-color: #ccc;    
+    }
+
+    .pratica .pratica-card-botao .botao-card.ativo{ 
+        background-color: var(--azul-escuro);    
+    }
+    
+}
+
+@media(max-width: 510px) {
+    .pratica .pratica-titulo {
+        font-size: 1.5em;
+    }
 }
