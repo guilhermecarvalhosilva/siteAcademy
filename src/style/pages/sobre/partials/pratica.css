@@ -42,20 +42,25 @@
 
 @media(max-width: 820px) {
     .pratica .pratica-imagens {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        max-width: 370px;
-        width: 95%;
+     max-width: 370px;
+     width: 95%;
+     min-height: 230px;
+     position: relative;
+     display: flex;
     }
     
     .pratica .pratica-imagens .pratica-card{
+        position: absolute;
+        top: 0px;
+        left: 0px;
         width: 100%;
-        display: none;
+        height: 100%;
+        opacity: 0;
     }
 
     .pratica .pratica-imagens .pratica-card.ativo{
-        display: flex;
+        transition: 1.2s;
+        opacity: 1;
     }
     
     .pratica .pratica-imagens .pratica-card .card-imagem{
