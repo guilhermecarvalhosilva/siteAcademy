@@ -1,2 +1,3 @@
-
-@import '../mkt/partials/conteudo-mkt.css'
+@import '../../global/global.css';
+@import '../mkt/partials/conteudo-mkt.css';
+@import '../partials/footer.css';

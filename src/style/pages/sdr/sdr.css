@@ -1,1 +1,3 @@
-@import '../sdr/partials/conteudo-sdr.css'
+@import '../../global/global.css';
+@import '../sdr/partials/conteudo-sdr.css';
+@import '../partials/footer.css';

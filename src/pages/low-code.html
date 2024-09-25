@@ -1,156 +1,169 @@
-<html lang="pt-br">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/pages/lowcode/lowcode.css">
-    <title>Academy One Low Code</title>
+    <link rel="stylesheet" href="../style/pages/cloud/cloud.css">
+    <title>Low Code - Academy</title>
 </head>
-
 <body>
+    <header class="cabecalho">
+        <section class="logo">
+            <img src="../images/global/logo-academy.png" alt="Logo Academy One" class="logo-item">
+        </section>
 
-    <!-- Cabeçalho -->
-    <header>
+        <section class="menu">
+            <nav class="menu-item">
+                <a href="#" class="item ativo">Home</a>
+                <a href="#" class="item">Sobre</a>
+                <a href="#" class="item">Mesas</a>
+                <a href="./src/pages/contato.html" class="item">Contato</a>
+            </nav>
 
-        <div class="lowcode_header_info">
-            <h1>Low Code</h1>
-            <p>
-                A mesa de low-code fornece um ambiente de desenvolvimento<br> usado para criar software de aplicativo por
-                meio de uma <br>interface gráfica de usuário.
-            </p>
-            <div class="lowcode_header_botao">
-                <button>
-                    Faça parte da equipe
-                </button>
-            </div>
-        </div>
+            <a href="#" class="botao">Entrar</a>
+        </section>
 
-        <div class="lowcode">
-            <img src="../images/mesas-logo/logo-lowcode.png">
-        </div>
+        <section class="mobile" onclick="menuShow()">
+            <div class="mobile-item"></div>
+            <div class="mobile-item"></div>
+            <div class="mobile-item"></div>
+        </section>
     </header>
 
-    <!-- Cabeçalho - FIM -->
+    <section class="conteudo1">
+        <div class="titulo">
+            <h1>Low Code</h1>
+            <div class="itens">
+                <p>  A mesa de low-code fornece um ambiente de desenvolvimento usado para criar software de aplicativo por meio de uma interface gráfica de usuário. </p>
+                <img src="../images/mesas-logo/logo-lowcode.png" alt="">
+        </div>
+        <div class="botao-conteudo1">
+            <button>Faça Parte da Equipe</button>
+        </div>
+        </div>
+    </section>
+ 
+    <div class="conteudo-2">
+        <h2>Como Funciona?</h2>
+        <p>A mesa opera como um hub dinâmico, focado em capacitar os alunos a dominarem a criação de aplicativos low code. Aqui, eles aprendem a conceber soluções inovadoras, implementar sistemas eficientes usando a abordagem low code e a desenvolver programação de inteligência artificial para chatbots. Além disso, os participantes têm a oportunidade de aprimorar suas habilidades na gestão de business intelligence, proporcionando uma experiência prática e abrangente no desenvolvimento de tecnologias avançadas."
+        </p>
+    </div>
 
+    <div class="get_main_serv">
 
-    <main>
-        <!-- Como funciona? -->
-        <section class="lowcode_main_cf-container">
-            <h2 id="lowcode_main_cf">Como funciona?</h2>
-            <p id="lowcode_main_text_fun">A mesa opera como um hub dinâmico, focado em capacitar os alunos a dominarem a criação de
-                aplicativos low code. Aqui, eles aprendem a conceber soluções inovadoras, implementar sistemas
-                eficientes usando a abordagem low code e a desenvolver programação de inteligência artificial para
-                chatbots. Além disso, os participantes têm a oportunidade de aprimorar suas habilidades na gestão de
-                business intelligence, proporcionando uma experiência prática e abrangente no desenvolvimento de
-                tecnologias avançadas."</p>
-        </section>
-        <!-- Como funciona? - FIM -->
+        <div id="get_main_serve">
+            <h3>Serviços</h3>
 
+            <div class="get_main_services">
 
-        <!-- Serviço -->
-
-        <section class="lowcode_main_serv">
-
-            <div id="lowcode_main_serve">
-
-                <div class="lowcode_main_services">
-                    <h3>Servicos</h3>
-                    <div class="lowcode_main_wrapper">
-                        <div class="lowcode_main_circulo"><img id="lowcode_main_img" src="../images/global/servicos/serv1.png"></div>
-                        <p id="lowcode_main_box">Desenvolvimento de Aplicativos Low Code</p>
-                    </div>
-
-                    <div class="lowcode_main_wrapper">
-                        <div class="lowcode_main_circulo"><img id="lowcode_main_img" src="../images/global/servicos/serv2.png"></div>
-                        <div class="lowcode_main_box boxRight">
-                            <p id="lowcode_main_box">Desenho e Inovação</p>
-                        </div>
-                    </div>
-                    <div class="lowcode_main_wrapper">
-                        <div class="lowcode_main_circulo"><img id="lowcode_main_img" src="../images/global/servicos/serv3.png"></div>
-                        <div class="lowcode_main_boxboxRight">
-                            <p id="lowcode_main_box">Gestão de Business Intelligence</p>
-                        </div>
-                    </div>
+                <div class="get_main_wrapper">
+                    <div class="get_main_circulo"><img id="get_main_img" src="../images/global/servicos/serv1.png"></div>
+                    <p id="get_main_box">Desenvolvimento de Aplicativos Low Code</p>
                 </div>
 
-
-
+                <div class="get_main_wrapper">
+                    <div class="get_main_circulo"><img id="get_main_img" src="../images/global/servicos/serv2.png"></div>
+                    <div class="get_main_boxboxRight">
+                        <p id="get_main_box">Desenho e Inovação</p>
+                    </div>
+                </div>
+                <div class="get_main_wrapper">
+                    <div class="get_main_circulo"><img id="get_main_img" src="../images/global/servicos/serv3.png"></div>
+                    <div class="get_main_boxboxRight">
+                        <p id="get_main_box">Gestão de Business Intelligence</p>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
 
 
-        </section>
-        <!-- Serviço - FIM -->
-
-
-        <!-- Responsabilidades -->
-        <section>
-            <h2 id="lowcode_main_cf"> Responsabilidades</h2>
-            <p id="lowcode_main_text_fun"> Os alunos desempenham um papel ativo e responsável. Eles aplicam prontamente os
-                conhecimentos adquiridos, criando soluções práticas como aplicativos low code e sistemas, e programando
-                inteligência artificial para chatbots. A colaboração e inovação são incentivadas, assim como a gestão
-                eficiente de projetos. Participam ativamente de atividades de business intelligence, aplicando análise
-                crítica para extrair insights valiosos. Assumindo essas responsabilidades, os alunos enriquecem sua
-                experiência e contribuem para o sucesso coletivo da mesa.</p>
+    <div class="conteudo-2">
+        <h2>Responsabilidades</h2>
+        <p>  Os alunos desempenham um papel ativo e responsável. Eles aplicam prontamente os conhecimentos adquiridos, criando soluções práticas como aplicativos low code e sistemas, e programando inteligência artificial para chatbots. A colaboração e inovação são incentivadas, assim como a gestão eficiente de projetos. Participam ativamente de atividades de business intelligence, aplicando análise crítica para extrair insights valiosos. Assumindo essas responsabilidades, os alunos enriquecem sua experiência e contribuem para o sucesso coletivo da mesa.
+        </p>
+    </div>
+    <div class="beneficios">
+        <div class="beneficios-titulo">
             <h2>Benefícios</h2>
-
-            <div class="lowcode_main_align">
-                <div class="lowcode_main_img1">
-                    <img src="../images/global/beneficios/beneficios-roxo01.png" alt="">
-                    <p class="lowcode_main_bnf1">Experiência Prática e Aplicação de Conhecimento</p>
-                </div>
-
-                <div class="lowcode_main_img2">
-                    <img src="../images/global/beneficios/beneficios-roxo02.png" alt="">
-                    <p class="lowcode_main_bnf2">Envolvimento em Atividades de Business Intelligence</p>
-                </div>
-
-                <div class="lowcode_main_img3">
-                    <img src="../images/global/beneficios/beneficios-roxo03.png" alt="">
-                    <p class="lowcode_main_bnf3">Desenvolvimento de Habilidades de Gerenciamento de Projetos</p>
-                </div>
+        </div>
+        <div class="beneficios-imagens">
+            <div class="beneficio">
+                <img src="../images/global/beneficios/beneficios-roxo01.png" alt="Benefício 1">
+                <p>Experiência Prática e Aplicação de Conhecimento</p>
+            </div>
+            <div class="beneficio">
+                <img src="../images/global/beneficios/beneficios-roxo02.png" alt="Benefício 2">
+                <p>Envolvimento em Atividades de Business Intelligence</p>
+            </div>
+            <div class="beneficio">
+                <img src="../images/global/beneficios/beneficios-roxo03.png" alt="Benefício 2">
+                <p>Desenvolvimento de Habilidades de Gerenciamento de Projetos</p>
             </div>
 
+        </div>
+    </div>
+    
+<section class="equipes">
+    <div class="carrossel-titulo">
+    <h2>Equipes</h2>
+</div>
+<div class="imagens-carrossel">
+    <i>
+        <input checked type="radio" name="s" style="background-image: url('../images/pages/carrossel/equipe.png');" title="Random Picture 1">
+        <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=2');" title="Random Picture 2">
+        <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=3');" title="Random Picture 3">
+        <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=4');" title="Random Picture 4">
+        <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=5');" title="Random Picture 5">
+    </i>
+</div>
+</section>
+    <div class="ideal-para">
+        <div class="ideal-para-titulo">
             <h2>Ideal Para</h2>
-
-            <div class="lowcode_main_align">
-                <div class="lowcode_main_img1">
-                    <img src="../images/global/ideial/ideal-roxo01.png" alt="">
-                    <p class="lowcode_main_ideal1">Alunos com desejoso de explorar o desenvolvimento de aplicativos low code, sistemas eficientes e
-                        inteligência artificial para chatbots.
-
-                    </p>
-                </div>
-
-                <div class="lowcode_main_img2">
-                    <img src="../images/global/ideial/ideal-roxo02.png" alt="">
-                    <p class="lowcode_main_ideal2">Alunos que desejam desenvolver habilidades de gestão de projetos, demonstrando responsabilidade
-                        no planejamento e execução eficiente de tarefas.</p>
-                </div>
-
-                <div class="lowcode_main_img3">
-                    <img src="../images/global/ideial/ideal-roxo03.png" alt="">
-                    <p class="lowcode_main_ideal3">Aqueles que valorizam a inovação e colaboração, buscando oportunidades para trabalhar em equipe
-                        na criação de soluções tecnológicas inovadoras.</p>
-                </div>
+        </div>
+        <div class="ideal-imagens">
+            <div class="ideal">
+                <img src="../images/global/ideial/ideal-roxo01.png" alt="ideal1">
+                <p>Alunos com desejoso de explorar o desenvolvimento de aplicativos low code, sistemas eficientes e inteligência artificial para chatbots.</p>
+            </div>
+            <div class="ideal">
+                <img src="../images/global/ideial/ideal-roxo02.png" alt="ideal2">
+                <p> Alunos que desejam desenvolver habilidades de gestão de projetos, demonstrando responsabilidade no planejamento e execução eficiente de tarefas.</p>
+            </div>
+            <div class="ideal">
+                <img src="../images/global/ideial/ideal-roxo03.png" alt="ideal3">
+                <p> Aqueles que valorizam a inovação e colaboração, buscando oportunidades para trabalhar em equipe na criação de soluções tecnológicas inovadoras.</p>
             </div>
 
+        </div>
+    </div>
 
+    <section class="competencias"></section>
+        <div class="carrossel-titulo">
+        <h2>Competencias Desenvolvidas</h2>
+    </div>
+    <div class="imagens-carrossel">
+        <i>
+            <input checked type="radio" name="s" style="background-image: url('../images/pages/carrossel/equipe.png');" title="Random Picture 6">
+            <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=2');" title="Random Picture 7">
+            <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=3');" title="Random Picture 8">
+            <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=4');" title="Random Picture 9">
+            <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=5');" title="Random Picture 10">
+        </i>
+    </div>
+    </section>
+
+    
+    
+    <footer class="rodape">
+        <section class="imagem">
+            <img src="../images/global/logo-academy-footer.png  " alt="logo academy one footer" class="imagem-item">
         </section>
+    </footer>
+    
 
-        <!-- Responsabilidades - FIM -->
+    <script src="../script/menuShow.js"></script>
 
-        <!-- Carrosel -->
-        <!-- Carrosel - FIM -->
-
-
-        <!-- Ideal para -->
-
-        <!-- Ideal para - FIM -->
-
-
-    </main>
 </body>
-
 </html>
