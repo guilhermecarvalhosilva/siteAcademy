@@ -1,0 +1,46 @@
+.depoimentos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px 0px;
+    padding: 30px 0px;
+}
+
+
+.depoimentos .titulo {
+    color: var(--azul-claro);
+    font-size: 1.8em;
+    max-width: 500px;
+    width: 95%;
+    text-align: center;
+}
+
+
+
+
+.depoimentos .linha {
+    position: relative;
+    width: 220px;
+    height: 15px;
+}
+
+
+.depoimentos .linha .esquerda{
+    background-color: var(--azul-claro);
+    width: 60%;
+    height: 2px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+.depoimentos .linha .direita{
+    background-color: var(--azul-escuro);
+    width: 60%;
+    height: 2px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
