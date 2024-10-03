@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+    {% endblock %}
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <header class="cabecalho" style="border-bottom: 2px solid #4A7FFF;">
+        <section class="logo">
+            <img src="{%static '/images/global/logo-academy.png'%}" alt="Logo Academy One" class="logo-item">
+        </section>
+
+        <section class="menu">
+            <nav class="menu-item">
+                <a href="{% url 'Core:homepage' %}" class="item {% if request.path == '/core/' %}ativo{% endif %}">Home</a>
+                <a href="{% url 'Core:sobre' %}" class="item {% if request.path == '/core/sobre/' %}ativo{% endif %}">Sobre</a>
+                <a href="{% url 'Estacoes:escolher_estacao' %}" class="item ativo">Estações</a>
+                <a href="{% url 'Core:contato' %}" class="item {% if request.path == '/core/contato/' %}ativo{% endif %}">Contato</a>
+            </nav>
+
+            <a href="#" class="botao">Entrar</a>  <!--Accounts:login -->
+        </section>
+
+        <section class="mobile" onclick="menuShow()">
+            <div class="mobile-item"></div>
+            <div class="mobile-item"></div>
+            <div class="mobile-item"></div>
+        </section>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <footer class="rodape">
+        <section class="imagem">
+            <img src="{% static '/images/global/logo-academy-footer.png' %}" alt="logo academy one footer" class="imagem-item">
+        </section>
+    </footer>
+</body>
+</html>
+
+{% block js %}
+{% endblock %}

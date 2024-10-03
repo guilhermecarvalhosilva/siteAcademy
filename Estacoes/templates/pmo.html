@@ -1,0 +1,144 @@
+{% extends 'base_verde.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static '/style/pages/pmo/pmo.css' %}">
+{% endblock %}
+{% block title %}
+    PMO - Academy
+{% endblock %}
+{% block content %}
+    <section class="conteudo1">
+        <div class="titulo">
+            <h1>Project Management Office</h1>
+            <div class="itens">
+                <p> A mesa de projetos, PMO, funciona como um canal de entrada de projetos do Eniac, sejam projetos externos ou internos. </p>
+                <img src="{% static '/images/mesas-logo/logo-pmo.png' %}" alt="">
+        </div>
+        <div class="botao-conteudo1">
+            <a href="{% url 'Core:contato' %}" style="color: white;text-decoration: none;">
+                <button>
+                        Faça Parte da Equipe
+                    </button>
+                </a>
+        </div>
+        </div>
+    </section>
+ 
+    <div class="conteudo-2">
+        <h2>Como Funciona?</h2>
+        <p>Agora, trabalhando na Mesa de Projetos, o PMO, atuando como o ponto de partida para os projetos no Eniac, seja de fontes externas, internas dos alunos ou colaboradores. Você gerencia a entrada de desafios e o cadastro de projetos por meio do sistema Link, acompanhando de perto as atividades de todas as mesas, além de colaborar com parceiros e clientes do Eniac
+        </p>
+    </div>
+
+    <div class="get_main_serv">
+
+        <div id="get_main_serve">
+            <h3>Serviços</h3>
+
+            <div class="get_main_services">
+
+                <div class="get_main_wrapper">
+                    <div class="get_main_circulo"><img id="get_main_img" src="{% static '/images/global/servicos/serv1.png' %}"></div>
+                    <p id="get_main_box">Gestão de projeto</p>
+                </div>
+
+                <div class="get_main_wrapper">
+                    <div class="get_main_circulo"><img id="get_main_img" src="{% static '/images/global/servicos/serv2.png' %}"></div>
+                    <div class="get_main_boxboxRight">
+                        <p id="get_main_box">Gestão dos desafios no Link</p>
+                    </div>
+                </div>
+                <div class="get_main_wrapper">
+                    <div class="get_main_circulo"><img id="get_main_img" src="{% static '/images/global/servicos/serv3.png' %}"></div>
+                    <div class="get_main_boxboxRight">
+                        <p id="get_main_box">Desenvolvimento de TAPs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="conteudo-2">
+        <h2>Responsabilidades</h2>
+        <p> Gerenciar e garantir que todos os projetos que entram no Eniac são entregues dentro dos prazos e todas as metas e objetivos sejam atendidos em sua integridade, respeitando orçamentos e custos (podendo ser financeiro, mão-de-obra).  
+        </p>
+    </div>
+    <div class="beneficios">
+        <div class="beneficios-titulo">
+            <h2>Benefícios</h2>
+        </div>
+        <div class="beneficios-imagens">
+            <div class="beneficio">
+                <img src="{% static '/images/global/beneficios/beneficios-verde01.png' %}" alt="Benefício 1">
+                <p>Oportunidade de Participação em Projetos Diversificados</p>
+            </div>
+            <div class="beneficio">
+                <img src="{% static '/images/global/beneficios/beneficios-verde02.png' %}" alt="Benefício 2">
+                <p>Desenvolvimento de Habilidades de Gestão</p>
+            </div>
+            <div class="beneficio">
+                <img src="{% static '/images/global/beneficios/beneficios-verde03.png' %}" alt="Benefício 2">
+                <p>Execução de Projetos</p>
+            </div>
+
+        </div>
+    </div>
+    
+<section class="equipes">
+    <div class="carrossel-titulo">
+    <h2>Equipes</h2>
+</div>
+<div class="imagens-carrossel">
+    <i>
+        <input checked type="radio" name="s" style="background-image: url('../images/pages/carrossel/equipe.png');" title="Random Picture 1">
+        <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=2');" title="Random Picture 2">
+        <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=3');" title="Random Picture 3">
+        <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=4');" title="Random Picture 4">
+        <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=5');" title="Random Picture 5">
+    </i>
+</div>
+</section>
+    <div class="ideal-para">
+        <div class="ideal-para-titulo">
+            <h2>Ideal Para</h2>
+        </div>
+        <div class="ideal-imagens">
+            <div class="ideal">
+                <img src="{% static '/images/global/ideial/ideal-verde01.png' %}" alt="ideal1">
+                <p>Alunos que buscam desenvolver habilidades práticas em gestão de projetos</p>
+            </div>
+            <div class="ideal">
+                <img src="{% static '/images/global/ideial/ideal-verde02.png' %}" alt="ideal2">
+                <p> Alunos que desejam aplicar seus conhecimentos em cenários práticos, ganhando experiência em gerenciamento de projetos e orçamentos 
+                </p>
+            </div>
+            <div class="ideal">
+                <img src="{% static '/images/global/ideial/ideal-verde03.png' %}" alt="ideal3">
+                <p> Alunos que desejam enriquecer seus currículos com experiência prática em gerenciamento de projetos, preparando-se para os desafios do mercado de trabalho após a conclusão dos estudos.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    
+
+    <div class="titulo-competencias">
+        <h2>Competências desenvolvidas</h2>
+    </div>
+        <div class="container">
+        
+            <div class="square">Gestão e Controle
+                de Projetos</div>
+            <div class="square">Avaliação de viabilidade
+                técnico-econômica de projetos</div>
+            <div class="square">Inteligência
+                Emocional</div>
+            <div class="square">Visão Holística</div>
+        </div>
+{% endblock %}
+{% block js %}
+    <script src="{% static '/script/menuShow.js' %}"></script>
+{% endblock %}
+</body>
+</html>

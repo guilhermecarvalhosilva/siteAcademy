@@ -1,0 +1,144 @@
+{% extends 'base_laranja.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static '/style/pages/bpo/bpo.css' %}">
+{% endblock %}
+{% block title %}
+    BPO - Academy
+{% endblock %}
+{% block content %}
+    <section class="conteudo1">
+        <div class="titulo">
+            <h1>Business Process Outsourcing</h1>
+            <div class="itens">
+                
+                <p> A mesa de BPO (Business Process Outsourcing) é focada na terceirização de processos de negócios. Nela, você transfere atividades e operações específicas para uma empresa externa especializada. Dentro do âmbito do BPO, sua equipe concentra-se principalmente na gestão de processos financeiros, abrangendo tarefas como contabilidade, processamento de contas a pagar e a receber, conciliação bancária e análise de dados financeiros.
+                </p>
+                <img src="{% static '/images/mesas-logo/logo-bpo.png' %}" alt="">
+        </div>
+        <div class="botao-conteudo1">
+            <a href="{% url 'Core:contato' %}" style="color: white;text-decoration: none;">
+            <button>
+                    Faça Parte da Equipe
+                </button>
+            </a>
+        </div>
+        </div>
+
+        
+    </section>
+ 
+    <div class="conteudo-2">
+        <h2>Como Funciona?</h2>
+        <p>Agora, trabalhando na Mesa de Projetos, o PMO, atuando como o ponto de partida para os projetos no Eniac, seja de fontes externas, internas dos alunos ou colaboradores. Você gerencia a entrada de desafios e o cadastro de projetos por meio do sistema Link, acompanhando de perto as atividades de todas as mesas, além de colaborar com parceiros e clientes do Eniac.</p>
+    </div>
+
+    <div class="get_main_serv">
+
+        <div id="get_main_serve">
+            <h3>Serviços</h3>
+
+            <div class="get_main_services">
+                
+                <div class="get_main_wrapper">
+                    <div class="get_main_circulo"><img id="get_main_img" src="{% static '/images/global/servicos/serv1.png' %}"></div>
+                    <p id="get_main_box">Atualização e automatização de Planilhas
+                    </p>
+                </div>
+
+                <div class="get_main_wrapper">
+                    <div class="get_main_circulo"><img id="get_main_img" src="{% static '/images/global/servicos/serv2.png' %}"></div>
+                    <div class="get_main_boxboxRight">
+                        <p id="get_main_box">Contas a Pagar/Contas a Receber</p>
+                    </div>
+                </div>
+                <div class="get_main_wrapper">
+                    <div class="get_main_circulo"><img id="get_main_img" src="{% static '/images/global/servicos/serv3.png' %}"></div>
+                    <div class="get_main_boxboxRight">
+                        <p id="get_main_box">Análise de Pagamentos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="responsabilidades">
+        <h2>Responsabilidades</h2>
+        <p>Envolvem a entrega pontual de demandas, agilidade, organização, comunicação eficaz, profissionalismo, precisão, adaptabilidade e busca constante por aprimoramento, garantindo assim um serviço de alta qualidade e eficiência para os clientes.</p>
+    </div>
+
+    <div class="beneficios">
+        <div class="beneficios-titulo">
+            <h2>Benefícios</h2>
+        </div>
+        <div class="beneficios-imagens">
+            <div class="beneficio">
+                <img src="{% static '/images/global/beneficios/beneficios-laranja01.png' %}" alt="Benefício 1">
+                <p>Análise de Pagamentos Especializada
+                </p>
+            </div>
+            <div class="beneficio">
+                <img src="{% static '/images/global/beneficios/beneficios-laranja02.png' %}" alt="Benefício 2">
+                <p>Gestão Eficiente de Contas a Pagar/Contas a Receber</p>
+            </div>
+            <div class="beneficio">
+                <img src="{% static '/images/global/beneficios/beneficios-laranja03.png' %}" alt="Benefício 2">
+                <p>Criação e manuseio de planilhas automatizadas</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <section class="equipes">
+        <div class="carrossel-titulo">
+        <h2>Equipes</h2>
+    </div>
+    <div class="imagens-carrossel">
+        <i>
+            <input checked type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=1');" title="Random Picture 1">
+            <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=2');" title="Random Picture 2">
+            <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=3');" title="Random Picture 3">
+            <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=4');" title="Random Picture 4">
+            <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=5');" title="Random Picture 5">
+        </i>
+    </div>
+    </section>
+    
+    
+
+    <div class="ideal-para">
+        <div class="ideal-para-titulo">
+            <h2>Ideal Para</h2>
+        </div>
+        <div class="ideal-imagens">
+            <div class="ideal">
+                <img src="{% static '/images/global/ideial/ideal-laranja01.png' %}" alt="ideal1">
+                <p> Alunos que buscam desenvolver habilidades práticas em negócios e processos operacionais de diferentes setores</p>
+            </div>
+            <div class="ideal">
+                <img src="{% static '/images/global/ideial/ideal-laranja02.png' %}" alt="ideal2">
+                <p>Alunos que desejam melhorar a skill de gestão de tempo, na prática, envolvendo gerenciamento de tarefas e cumprimento de prazos.</p>
+            </div>
+            <div class="ideal">
+                <img src="{% static '/images/global/ideial/ideal-laranja03.png' %}" alt="ideal3">
+                <p> Alunos que se interessam por tecnologia, de serem desafiados e que desejam melhorar sua adaptação e flexibilidade.</p>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="titulo-competencias">
+        <h2>Competências desenvolvidas</h2>
+    </div>
+        <div class="container">
+        
+            <div class="square">Gestão financeira</div>
+            <div class="square">Visão de negócios</div>
+            <div class="square">Liderança</div>
+            <div class="square">Comunicação</div>
+        </div>
+{% endblock %}
+{% block js %}
+    <script src="{% static '/script/menuShow.js' %}"></script>
+{% endblock %}

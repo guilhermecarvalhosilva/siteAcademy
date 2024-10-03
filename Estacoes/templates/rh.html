@@ -1,0 +1,143 @@
+{% extends 'base_laranja.html' %}
+{% load static %}
+
+{% block title %}
+    Recursos Humanos - Academy
+{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{% static '/style/pages/rh/rh.css' %}">
+{% endblock %}
+{% block content %}
+    <section class="conteudo1">
+        <div class="titulo">
+            <h1>Recursos Humanos</h1>
+            <div class="itens">
+                
+                <p>A mesa de Recursos Humanos concentra-se em comunicação eficaz e transferência de informações. Demonstra um cuidado meticuloso em relação aos documentos, realizando atividades colaborativas para prevenir erros. Sua comunicação é profissional, minimizando conversas paralelas e contribuindo para um ambiente mais concentrado e eficiente.
+                </p>
+                <img src="{% static '/images/mesas-logo/logo-rh.png' %}" alt="">
+        </div>
+        <div class="botao-conteudo1">
+            <a href="{% url 'Core:contato' %}" style="color: white;text-decoration: none;">
+                <button>
+                        Faça Parte da Equipe
+                    </button>
+                </a>
+        </div>
+        </div>
+
+        
+    </section>
+ 
+    <div class="conteudo-2">
+        <h2>Como Funciona?</h2>
+        <p>Agora, você assume um papel ativo na equipe de Recursos Humanos, adotando uma abordagem tradicional que se concentra na comunicação eficaz e transferência de informações. Demonstra um cuidado meticuloso em relação aos documentos, realizando atividades colaborativas para prevenir erros. Sua comunicação é profissional, minimizando conversas paralelas e contribuindo para um ambiente mais concentrado e eficiente.</p>
+    </div>
+
+    <div class="get_main_serv">
+
+        <div id="get_main_serve">
+            <h3>Serviços</h3>
+
+            <div class="get_main_services">
+                
+                <div class="get_main_wrapper">
+                    <div class="get_main_circulo"><img id="get_main_img" src="{% static '/images/global/servicos/serv1.png' %}"></div>
+                    <p id="get_main_box">Otimização Educacional</p>
+                </div>
+
+                <div class="get_main_wrapper">
+                    <div class="get_main_circulo"><img id="get_main_img" src="{% static '/images/global/servicos/serv2.png' %}"></div>
+                    <div class="get_main_boxboxRight">
+                        <p id="get_main_box">Suporte Personalizado</p>
+                    </div>
+                </div>
+                <div class="get_main_wrapper">
+                    <div class="get_main_circulo"><img id="get_main_img" src="{% static '/images/global/servicos/serv3.png' %}"></div>
+                    <div class="get_main_boxboxRight">
+                        <p id="get_main_box">Desempenho Aprimorado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="responsabilidades">
+        <h2>Responsabilidades</h2>
+        <p>A principal responsabilidade da equipe é gerenciar documentos, proporcionando fácil acesso para qualquer necessidade ou registro. Isso inclui a implementação de controle de entrada e saída devido ao volume de pessoas envolvidas. Todos os procedimentos realizados são devidamente reportados ao Departamento de Recursos Humanos, assegurando assim um controle adequado. Além disso, o contrato de mídia desempenha um papel crucial, permitindo a análise da adaptação e avaliação do desempenho dos colaboradores. Em determinadas ocasiões, a equipe também facilita esse processo de avaliação para terceiros.</p>
+    </div>
+
+    <div class="beneficios">
+        <div class="beneficios-titulo">
+            <h2>Benefícios</h2>
+        </div>
+        <div class="beneficios-imagens">
+            <div class="beneficio">
+                <img src="{% static '/images/global/beneficios/beneficios-laranja01.png' %}" alt="Benefício 1">
+                <p>Crescimento individual e coletivo</p>
+            </div>
+            <div class="beneficio">
+                <img src="{% static '/images/global/beneficios/beneficios-laranja02.png' %}" alt="Benefício 2">
+                <p>Gestão Organizada de registros e documentos</p>
+            </div>
+            <div class="beneficio">
+                <img src="{% static '/images/global/beneficios/beneficios-laranja03.png' %}" alt="Benefício 2">
+                <p>Alinhamento com metas da equipe e objetivos organizacionais</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <section class="equipes">
+        <div class="carrossel-titulo">
+        <h2>Equipes</h2>
+    </div>
+    <div class="imagens-carrossel">
+        <i>
+            <input checked type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=1');" title="Random Picture 1">
+            <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=2');" title="Random Picture 2">
+            <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=3');" title="Random Picture 3">
+            <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=4');" title="Random Picture 4">
+            <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=5');" title="Random Picture 5">
+        </i>
+    </div>
+    </section>
+    
+    
+
+    <div class="ideal-para">
+        <div class="ideal-para-titulo">
+            <h2>Ideal Para</h2>
+        </div>
+        <div class="ideal-imagens">
+            <div class="ideal">
+                <img src="{% static '/images/global/ideial/ideal-laranja01.png' %}" alt="ideal1">
+                <p>Alunos com habilidades sólidas de comunicação</p>
+            </div>
+            <div class="ideal">
+                <img src="{% static '/images/global/ideial/ideal-laranja02.png' %}" alt="ideal2">
+                <p>Aqueles que têm empatia e habilidades colaborativas, pois o RH muitas vezes envolve lidar com questões pessoais e promover um ambiente de trabalho harmonioso.</p>
+            </div>
+            <div class="ideal">
+                <img src="{% static '/images/global/ideial/ideal-laranja03.png' %}" alt="ideal3">
+                <p>Estudantes que têm interesse em questões jurídicas relacionadas ao emprego e regulamentações empresariais.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="titulo-competencias">
+        <h2>Competências desenvolvidas</h2>
+    </div>
+        <div class="container">
+        
+            <div class="square">Orientação profissional</div>
+            <div class="square">Formação de liderança</div>
+            <div class="square">Recrutamento e seleção</div>
+            <div class="square">Formação de squad</div>
+        </div>
+{% endblock %}
+{% block js %}
+    <script src="{% static '/script/menuShow.js' %}"></script>
+{% endblock %}

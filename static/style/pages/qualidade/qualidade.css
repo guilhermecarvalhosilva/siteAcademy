@@ -1,0 +1,6 @@
+@import '../../global/global.css';
+@import './partials/normalize.css';
+@import './partials/variable.css';
+@import './partials/footer.css';
+@import './partials/header.css';
+@import '../qualidade/partials/conteudo-qualidade.css';

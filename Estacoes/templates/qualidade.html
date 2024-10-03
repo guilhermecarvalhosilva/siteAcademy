@@ -1,0 +1,137 @@
+{% extends 'base_verde.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static '/style/pages/qualidade/qualidade.css' %}">
+{% endblock %}
+{% block title %}
+Qualidade - Academy
+{% endblock %}
+{% block content %}
+    
+
+    <section class="conteudo1">
+        <div class="titulo">
+            <h1>Qualidade</h1>
+            <div class="itens">
+                <p>  A mesa de qualidade, funciona em prol da eficiência das mesas no projeto.  </p>
+                <img src="{% static '/images/mesas-logo/logo-qualidade.png' %}" alt="">
+        </div>
+        <div class="botao-conteudo1">
+            <a href="{% url 'Core:contato' %}" style="color: white;text-decoration: none;">
+                <button>
+                        Faça Parte da Equipe
+                    </button>
+                </a>
+        </div>
+        </div>
+    </section>
+ 
+    <div class="conteudo-2">
+        <h2>Como Funciona?</h2>
+        <p>Agora, trabalhando na Mesa de Gestão da Qualidade, dedicada à construção de projetos. Comprometido com a melhoria contínua, lidera avaliações e implementa soluções para garantir qualidade em cada fase. Você trabalha de perto com todas as partes interessadas, promovendo uma cultura de transparência.
+        </p>
+    </div>
+
+    <div class="get_main_serv">
+
+        <div id="get_main_serve">
+            <h3>Serviços</h3>
+
+            <div class="get_main_services">
+
+                <div class="get_main_wrapper">
+                    <div class="get_main_circulo"><img id="get_main_img" src="{% static '/images/global/servicos/serv1.png' %}"></div>
+                    <p id="get_main_box">Elaboração de documentos</p>
+                </div>
+
+                <div class="get_main_wrapper">
+                    <div class="get_main_circulo"><img id="get_main_img" src="{% static '/images/global/servicos/serv2.png' %}"></div>
+                    <div class="get_main_boxboxRight">
+                        <p id="get_main_box">Pesquisas</p>
+                    </div>
+                </div>
+                <div class="get_main_wrapper">
+                    <div class="get_main_circulo"><img id="get_main_img" src="{% static '/images/global/servicos/serv3.png' %}"></div>
+                    <div class="get_main_boxboxRight">
+                        <p id="get_main_box">Avaliações</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="conteudo-2">
+        <h2>Responsabilidades</h2>
+        <p> Nosso compromisso é avaliar, pesquisar e instruir sobre produtos em geral. Estamos dedicados a fornecer informações precisas e úteis, guiando todos para as melhores escolhas. 
+        </p>
+    </div>
+    <div class="beneficios">
+        <div class="beneficios-titulo">
+            <h2>Benefícios</h2>
+        </div>
+        <div class="beneficios-imagens">
+            <div class="beneficio">
+                <img src="{% static '/images/global/beneficios/beneficios-verde01.png' %}" alt="Benefício 1">
+                <p>Elaboração de documentos especializados, garantindo que cada projeto seja documentado de maneira abrangente, proporcionando clareza e direção em todas as fases.</p>
+            </div>
+            <div class="beneficio">
+                <img src="{% static '/images/global/beneficios/beneficios-verde02.png' %}" alt="Benefício 2">
+                <p>Conduzimos pesquisas abrangentes para embasar cada decisão, assegurando que você tenha as informações mais recentes e relevantes ao seu alcance.</p>
+            </div>
+            <div class="beneficio">
+                <img src="{% static '/images/global/beneficios/beneficios-verde03.png' %}" alt="Benefício 2">
+                <p>Como parte de nossa responsabilidade, estamos dedicados a avaliar, pesquisar e instruir sobre produtos em geral.</p>
+            </div>
+
+        </div>
+    </div>
+    
+<section class="equipes">
+    <div class="carrossel-titulo">
+    <h2>Equipes</h2>
+</div>
+<div class="imagens-carrossel">
+    <i>
+        <input checked type="radio" name="s" style="background-image: url('../images/pages/carrossel/equipe.png');" title="Random Picture 1">
+        <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=2');" title="Random Picture 2">
+        <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=3');" title="Random Picture 3">
+        <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=4');" title="Random Picture 4">
+        <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=5');" title="Random Picture 5">
+    </i>
+</div>
+</section>
+    <div class="ideal-para">
+        <div class="ideal-para-titulo">
+            <h2>Ideal Para</h2>
+        </div>
+        <div class="ideal-imagens">
+            <div class="ideal">
+                <img src="{% static '/images/global/ideial/ideal-verde01.png' %}" alt="ideal1">
+                <p>Aprimorar habilidades em gestão de projetos e qualidade.</p>
+            </div>
+            <div class="ideal">
+                <img src="{% static '/images/global/ideial/ideal-verde02.png' %}" alt="ideal2">
+                <p>Aplicar conhecimentos teóricos de forma prática.</p>
+            </div>
+            <div class="ideal">
+                <img src="{% static '/images/global/ideial/ideal-verde03.png' %}" alt="ideal3">
+                <p>Ambiente para aplicar e promover a melhoria constante.</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="titulo-competencias">
+        <h2>Competências desenvolvidas</h2>
+    </div>
+        <div class="container">
+        
+            <div class="square">Implementação de ações corrigidas</div>
+            <div class="square">Gestão de riscos</div>
+            <div class="square">Estabelecimento dos objetivos</div>
+            <div class="square">Análise de dados </div>
+        </div>
+    {% endblock %}
+    {% block js %}
+    <script src="{% static '/script/menuShow.js' %}"></script>
+    {% endblock %}
