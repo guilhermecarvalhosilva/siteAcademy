@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex; 
+    box-shadow: 3px 3px 3px 3px gray;
+}
+
+.container .formulario .cabecalho-formulario .title > h2 {
+    color: black;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.image-top {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #1D267D;
+}
+
+.image-top img {
+    width: 300px;
+}
+
+.formulario {
+    width: 50%;
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecalho-formulario {
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+}
+
+.caixa-de-inputs {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.caixa-de-inputs label {
+    font-weight: 500;
+    display: block;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.caixa-de-inputs input {
+    width: 80%; 
+    max-width: 300px;
+    border-radius: 1px;
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+}
+
+.botao-para-cadastro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.botao-para-cadastro button {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+    border: none;
+    background-color: #cccccc; 
+    padding: 12px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s; 
+}
+
+.botao-para-cadastro button:hover {
+    background-color: #999999; 
+}
+
+.link-login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.link-login > a {
+    color: #003f5c;
+    text-decoration: none;
+    cursor: pointer;
+    display: block; 
+    width: 80%; 
+    max-width: 300px; 
+    text-align: center; 
+    padding: 10px; 
+    font-size: 0.875rem; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+}
+
+.link-login > a:hover {
+    color: #1c88b9;
+}
+
+.caixa-de-inputs > i {
+    color: blue;
+}
+
+.textos > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 1px 1px;
+    text-align: center;
+}
