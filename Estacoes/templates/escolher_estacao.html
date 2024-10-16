@@ -8,7 +8,7 @@
 {% endblock %}
 {% block content %}
     <main class="conteudo-mesas">
-       <h1 class="mesas-titulo">Mesas</h2>
+       <h1 class="mesas-titulo">Estações</h2>
 
        <section class="mesas-card ">
 
@@ -18,20 +18,14 @@
             </div>
 
             <div class="card verde-claro">
-                <a href="{% url 'Estacoes:pmo' %}">
-                    <div class="card-item verde-escuro">
-                        <img src="{% static '/images/mesas-logo/logo-pmo-vertical.png' %}" alt="logo mesa de PMO" class="imagem">
-                    </div>
+                <a href="{% url 'Estacoes:pmo' %}" class="card-item verde-escuro">
+                    <img src="{% static '/images/mesas-logo/logo-pmo-vertical.png' %}" alt="logo mesa de PMO" class="imagem">
                 </a>
-                <a href="{% url 'Estacoes:qualidade' %}">
-                   <div class="card-item verde-escuro">    
-                        <img src="{% static '/images/mesas-logo/logo-qualidade-vertical.png' %}" alt="Logo da mesa de qualidade" class="imagem">
-                   </div>
+                <a href="{% url 'Estacoes:qualidade' %}" class="card-item verde-escuro">
+                    <img src="{% static '/images/mesas-logo/logo-qualidade-vertical.png' %}" alt="Logo da mesa de qualidade" class="imagem">
                 </a>
-                <a href="{% url 'Estacoes:get' %}">
-                    <div class="card-item verde-escuro">
-                        <img src="{% static '/images/mesas-logo/logo-get-vertical.png' %}" alt="logo da mesa de qualidade" class="imagem">
-                    </div>
+                <a href="{% url 'Estacoes:get' %}" class="card-item verde-escuro">
+                    <img src="{% static '/images/mesas-logo/logo-get-vertical.png' %}" alt="logo da mesa de qualidade" class="imagem">
                 </a>
             </div>
         </article>
@@ -42,20 +36,14 @@
             </div>
 
             <div class="card laranja-claro">
-                <a href="{% url 'Estacoes:esg' %}">
-                    <div class="card-item laranja-escuro">
+                <a href="{% url 'Estacoes:esg' %}" class="card-item laranja-escuro">
                         <img src="{% static '/images/mesas-logo/logo-esg-vertical.png' %}" alt="logo mesa de PMO" class="imagem">
-                    </div>
                 </a>
-                <a href="{% url 'Estacoes:bpo' %}">
-                    <div class="card-item laranja-escuro">
+                <a href="{% url 'Estacoes:bpo' %}" class="card-item laranja-escuro">
                         <img src="{% static '/images/mesas-logo/logo-bpo-vertical.png' %}" alt="Logo da mesa de qualidade" class="imagem">
-                    </div>
                 </a>
-                <a href="{% url 'Estacoes:rh' %}">
-                    <div class="card-item laranja-escuro">
-                        <img src="{% static '/images/mesas-logo/logo-rh-vertical.png' %}" alt="logo da mesa de qualidade" class="imagem">
-                    </div>
+                <a href="{% url 'Estacoes:rh' %}" class="card-item laranja-escuro">
+                    <img src="{% static '/images/mesas-logo/logo-rh-vertical.png' %}" alt="logo da mesa de qualidade" class="imagem">
                 </a>
             </div>
         </article>
@@ -66,15 +54,11 @@
             </div>
 
             <div class="card roxo-claro">
-                <a href="{% url 'Estacoes:low_code' %}">
-                  <div class="card-item roxo-escuro">
+                <a href="{% url 'Estacoes:low_code' %}" class="card-item roxo-escuro">
                         <img src="{% static '/images/mesas-logo/logo-lowcode-vertical.png' %}" alt="logo mesa de PMO" class="imagem">
-                   </div>
                 </a>
-                <a href="{% url 'Estacoes:cloud' %}">
-                   <div class="card-item roxo-escuro">
-                        <img src="{% static '/images/mesas-logo/logo-cloud-vertical.png' %}" alt="Logo da mesa de qualidade" class="imagem">
-                    </div>
+                <a href="{% url 'Estacoes:cloud' %}" class="card-item roxo-escuro">
+                   <img src="{% static '/images/mesas-logo/logo-cloud-vertical.png' %}" alt="Logo da mesa de qualidade" class="imagem">
                 </a>
             </div>
         </article>
@@ -85,15 +69,11 @@
             </div>
 
             <div class="card azul-claro">
-                <a href="{% url 'Estacoes:mkt' %}">
-                    <div class="card-item azul-escuro">
-                        <img src="{% static '/images/mesas-logo/logo-marketing-vertical.png' %}" alt="logo mesa de PMO" class="imagem">
-                    </div>
+                <a href="{% url 'Estacoes:mkt' %}" class="card-item azul-escuro">
+                    <img src="{% static '/images/mesas-logo/logo-marketing-vertical.png' %}" alt="logo mesa de PMO" class="imagem">
                 </a>
-                <a href="{% url 'Estacoes:sdr' %}">
-                    <div class="card-item azul-escuro">
-                        <img src="{% static '/images/mesas-logo/logo-sdr-vertical.png' %}" alt="Logo da mesa de qualidade" class="imagem">
-                    </div>
+                <a href="{% url 'Estacoes:sdr' %}" class="card-item azul-escuro">
+                    <img src="{% static '/images/mesas-logo/logo-sdr-vertical.png' %}" alt="Logo da mesa de qualidade" class="imagem">
                 </a>
             </div>
         </article>

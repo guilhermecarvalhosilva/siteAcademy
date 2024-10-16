@@ -10,3 +10,9 @@ def contato(request):
 
 def sobre(request):
     return render(request, 'sobre.html')
+
+def login(request):
+    return render(request, 'login.html')
+
+def cadastro(request):
+    return render(request, 'cadastro.html')

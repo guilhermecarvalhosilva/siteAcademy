@@ -1,0 +1,119 @@
+{% extends "account/base_entrance.html" %}
+{% load allauth i18n %}
+{% block head_title %}
+    {% trans "Signup" %}
+{% endblock head_title %}
+{% block content %}
+    {% element h1 %}
+        {% trans "Sign Up" %}
+    {% endelement %}
+    {% setvar link %}
+        <a href="{{ login_url }}">
+        {% endsetvar %}
+        {% setvar end_link %}
+        </a>
+    {% endsetvar %}
+    {% element p %}
+        {% blocktranslate %}Already have an account? Then please {{ link }}sign in{{ end_link }}.{% endblocktranslate %}
+    {% endelement %}
+    {% if not SOCIALACCOUNT_ONLY %}
+        {% url 'account_signup' as action_url %}
+        {% element form form=form method="post" action=action_url tags="entrance,signup" %}
+            {% slot body %}
+                {% csrf_token %}
+                {% element fields form=form unlabeled=True %}
+                {% endelement %}
+                {{ redirect_field }}
+            {% endslot %}
+            {% slot actions %}
+                {% element button tags="prominent,signup" type="submit" %}
+                    {% trans "Sign Up" %}
+                {% endelement %}
+            {% endslot %}
+        {% endelement %}
+    {% endif %}
+    {% if PASSKEY_SIGNUP_ENABLED %}
+        {% element hr %}
+        {% endelement %}
+        {% element button href=signup_by_passkey_url tags="prominent,signup,outline,primary" %}
+            {% trans "Sign up using a passkey" %}
+        {% endelement %}
+    {% endif %}
+    {% if SOCIALACCOUNT_ENABLED %}
+        {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
+    {% endif %}
+{% endblock content %}
+
+
+
+
+<!-- {% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="{% static 'style/pages/padrao_login/login.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="image-top">
+            <div class="image-academy">
+                <img src="{% static 'images/pages/padrao_login/Logo_ACADEMY_-_FULL_White.png' %}" alt="#">
+                <p>Login para visualizar o desenvolvimento da Academy One!</p> 
+            </div> 
+            <img src="{% static 'images/pages/padrao_login/Group.svg' %}" class="icone01" alt="">
+            <img src="{% static 'images/pages/padrao_login/Group 153.svg' %}" class="icone02" alt="">
+            <img src="{% static 'images/pages/padrao_login/Group 156.svg' %}" class="icone03" alt="">
+            <img src="{% static 'images/pages/padrao_login/Group 157.svg' %}" class="icone04" alt="">
+            <img src="{% static 'images/pages/padrao_login/Group 160.svg' %}" class="icone05" alt="">
+        </div>
+
+        <div class="formulario">
+            <form method="post" action="{% url 'account_signup' %}">
+                {% csrf_token %}
+                <div class="cabecalho-formulario">
+                    <div class="title">
+                        <h2>Crie Sua Conta</h2>
+                    </div>
+                </div>
+                <div class="inputs">
+                    <div class="caixa-de-inputs"> 
+                        <div class="input-container">
+                            <input id="id_username" type="text" name="username" class="text-input" placeholder=" " required>
+                            <label for="id_username" class="label">Digite seu nome</label>
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="caixa-de-inputs"> 
+                        <div class="input-container">
+                            <input id="id_password1" type="password" name="password1" class="text-input" placeholder=" " required>
+                            <label for="id_password1" class="label">Digite sua Senha</label>
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="caixa-de-inputs"> 
+                        <div class="input-container">
+                            <input id="id_password2" type="password" name="password2" class="text-input" placeholder=" " required>
+                            <label for="id_password2" class="label">Confirme sua Senha</label>
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="botao-para-cadastro">
+                    <button type="submit" id="login-button">Criar Conta</button>
+                </div>
+                <div class="link-senha">
+                    <a href="{% url 'account_login' %}">Voltar ao login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="{% static 'script/pages/padrao_login/padrao_login.js' %}"></script>
+</body>
+</html> -->
