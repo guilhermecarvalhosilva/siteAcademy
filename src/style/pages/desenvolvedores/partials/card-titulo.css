@@ -1,0 +1,19 @@
+.conteudo-desenvolvedores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteudo-desenvolvedores .card-titulo {
+    background-color: var(--dev-titulo);
+    width: 100%;
+    min-height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo-desenvolvedores .card-titulo .titulo-item {
+    color: var(--azul-escuro);
+    font-size: 1.8em;
+}

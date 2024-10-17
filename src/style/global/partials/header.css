@@ -38,7 +38,8 @@
 
 .cabecalho .menu .menu-item .item {
     height: 100%;
-    width: 100px;
+    min-width: 100px;
+    padding: 0px 15px;
     display: flex;
     align-items: center;
     justify-content: center;
