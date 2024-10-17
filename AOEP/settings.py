@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Estacoes',
     'Core',
+    'Profiles',
 
     #Apps externos
     'django.contrib.sites',

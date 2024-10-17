@@ -23,7 +23,7 @@
                 <a href="{% url 'Core:contato' %}" class="item {% if request.path == '/core/contato/' %}ativo{% endif %}">Contato</a>
             </nav>
 
-            <a href="#" class="botao">Entrar</a>  <!--Accounts:login -->
+            <a href="{% url 'Profiles:login' %}" class="botao">Entrar</a>  <!--Accounts:login -->
         </section>
 
         <section class="mobile" onclick="menuShow()">

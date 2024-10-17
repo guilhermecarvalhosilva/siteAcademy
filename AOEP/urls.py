@@ -22,6 +22,7 @@ urlpatterns = [
     path('estacoes/', include("Estacoes.urls")),  
     path('core/', include("Core.urls")),  
     path('dash/', include("Dashboard.urls")),  
+    path('profiles/', include("Profiles.urls")),  
     
     #externo
     path('accounts/', include('allauth.urls')),
