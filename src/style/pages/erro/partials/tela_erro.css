@@ -5,25 +5,25 @@
 }
 
 
-h1{
+.titulo{
     text-align: center;
     font-size: 200px;
     color: #292929;
 }
 
-h2{
+.subTitulo{
     text-align: center;
     color: #292929;
 }
 
 
-.img_erro img{
+.img_erro .logo_erro{
     width: 100px;
     height: 100px;
 }
 
 
-.img_erro img{
+.img_erro .logo_erro{
     animation: girar 2s infinite;
 }
 
@@ -53,19 +53,19 @@ h2{
 
 @media (max-width: 728px){
 
-        h1{
+        .titulo{
             text-align: center;
             font-size: 100px;
             color: #292929;
         }
         
-        h2{
+        .subTitulo{
             text-align: center;
             color: #292929;
             font-size: 20px;
         }
 
-        .img_erro img{
+        .img_erro .logo_erro{
             width: 70px;
             height: 70px;
         }

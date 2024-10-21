@@ -44,6 +44,36 @@
     gap: 20px 0px;
 }
 
+.informacoes .escrita .form-qrcode{
+    background-color: var(--azul-medio);
+    max-width: 320px;
+    width: 95%;
+    height: auto;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px 0px;
+    border-radius: 10px;
+}
+
+.informacoes .escrita .form-qrcode .form-titulo {
+    color: var(--branco);
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.informacoes .escrita .form-qrcode .qrcode {
+    max-width: 250px;
+    width: 90%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.informacoes .escrita .qrcode .qrcode-imagem{
+    width: 100%;
+}
 
 .informacoes .escrita .card{
     background-color: var(--azul-medio);
@@ -153,6 +183,10 @@
 
 
 @media(max-width: 420px) {
+    .informacoes .escrita .form-qrcode .form-titulo {
+        font-size: 1.1em;
+    }
+
     .informacoes .escrita .card .card-item .icon{
         color: var(--branco);
         font-size: 1.5em;
@@ -181,6 +215,10 @@
         color: var(--branco);
         font-size: 0.7em;
         font-weight: 500;
+    }
+
+    .informacoes .escrita .form-qrcode .form-titulo {
+        font-size: 0.9em;
     }
 }
 
