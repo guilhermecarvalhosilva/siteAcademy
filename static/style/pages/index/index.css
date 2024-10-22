@@ -1,0 +1,9 @@
+@import '../../global/global.css';
+@import './partials/variaveis.css';
+@import './partials/header.css';
+@import './partials/principal.css';
+@import './partials/objetivo.css';
+@import './partials/praticas.css';
+@import './partials/depoimentos.css';
+@import './partials/empresas.css';
+@import './partials/footer.css';

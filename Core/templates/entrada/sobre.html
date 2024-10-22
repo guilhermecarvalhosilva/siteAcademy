@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static '/style/pages/sobre/sobre.css' %}">
+{% endblock %}
+{% block title %}
+Academy One - Sobre
+{% endblock %}
+{% block content %}
+    <main class="conteudo-sobre">
+        <section class="historia">
+            <h2 class="historia-titulo">Nossa História</h2>
+            <p class="historia-paragrafo">
+                Nosso ecossitema tem como missão capacitar alunos por meio de abordagens inovadoras e práticas utilizando as mesas para agregar conhecimento em nossos alunos. Focamos em oferecer programas educacionais que vão além da teoria, proporcionando experiências práticas e oportunidades de aprendizado multidisciplinar e transdiciplinar. Acreditamos que a verdadeira capacitação vai além da sala de aula, envolvendo a aplicação prática do conhecimento em projetos reais. Nossos instrutores são líderes experientes em seus campos, proporcionando orientação valiosa para preparar os alunos para os desafios do mundo profissional. Junte-se a nós e transforme seu aprendizado em habilidades tangíveis para o sucesso futuro.
+            </p>
+        </section>
+
+        <section class="principios">
+            <article class="principio-item">
+                <img src="{% static '/images/pages/sobre/missao.png' %}" alt="" class="missao">
+                <h3 class="titulo">Missão</h3>
+                <p class="paragrafo">
+                    Diminuir a lacuna entre expectativa do mercado e a realidade oferecida pelas instituições de ensino
+                </p>
+            </article>
+
+            <article class="principio-item">
+                <img src="{% static '/images/pages/sobre/visao.png' %}" alt="" class="visao">
+                <h3 class="titulo">Visão</h3>
+                <p class="paragrafo">
+                    Ser a melhor startup de desenvolvimento e capacitação de profissionais do mercado
+                </p>
+            </article>
+
+            <article class="principio-item">
+                <img src="{% static '/images/pages/sobre/valores.png' %}" alt="" class="valores">
+                <h3 class="titulo">Valores</h3>
+                <p class="paragrafo">
+                    Desenvolver e capacitar profissionais para o mercado com ética, transparência, foco em soft, hard e deep skills, utilizando ferramentas inovadoras e tecnológias com disciplina, ordem e segurança. 
+                </p>
+            </article>
+        </section>
+
+        <section class="pratica">
+            <h2 class="pratica-titulo">Na Prática</h2>
+            <article class="pratica-imagens">
+                <div class="pratica-card ativo">
+                    <img src="{% static '/images/pages/sobre/imagem-pratica-1.png' %}" alt="" class="card-imagem">
+                </div>
+
+                <div class="pratica-card ">
+                    <img src="{% static '/images/pages/sobre/imagem-pratica-2.png' %}" alt="" class="card-imagem">
+                </div>
+
+                <div class="pratica-card">
+                    <img src="{% static '/images/pages/sobre/imagem-pratica-3.png' %}" alt="" class="card-imagem">
+                </div>
+            </article>
+            <article class="pratica-card-botao">
+                <button class="botao-card ativo"></button>
+                <button class="botao-card"></button>
+                <button class="botao-card"></button>
+            </article>
+        </section>
+    </main>
+{% endblock %}
+{% block js %}
+    <script src="{% static '/script/global/menuShow.js' %}"></script>
+    <script src="{% static '/script/pages/sobre/slider-sobre.js' %}"></script>
+{% endblock %}
