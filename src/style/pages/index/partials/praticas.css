@@ -21,47 +21,91 @@
     text-align: center;
 }
 
-.praticas .mesas {
-    max-width: 950px;
-    width: 90%;
+.praticas .estacoes {
+    width: 95%;
+    height: auto;
+    padding: 10px 0px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-
+    gap: 30px 0px;
 }
 
-.praticas .mesas .card {
-    width: 140px;
-    height: 106px;
-    border-radius: 10px;
+.praticas .estacoes .estacoes-titulo {
+    font-size: 2em;
+    color: var(--azul-escuro);
+    font-weight: 600;
+}
+
+.praticas .estacoes .estacoes-card {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    gap: 20px 35px;
 }
 
-.praticas .mesas .card.azul {
+.praticas .estacoes .estacoes-card .card-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.praticas .estacoes .estacoes-card .card-item.grande {
+    max-width: 176px;
+    width: 100%;
+    height: 176px;
+}
+
+.praticas .estacoes .estacoes-card .card-item.pequeno {
+    max-width: 160px;
+    width: 100%;
+    height: 160px;
+}
+
+.praticas .estacoes .estacoes-card .card-item.cinza {
+    background-color: var(--cinza-claro);
+    border: 4px solid var(--preto);
+}
+
+.praticas .estacoes .estacoes-card .card-item.azul {
     background-color: var(--azul-claro);
+    border: 4px solid var(--azul-escuro);
 }
 
-.praticas .mesas .card.laranja {
+.praticas .estacoes .estacoes-card .card-item.laranja {
     background-color: var(--laranja-claro);
 }
 
-.praticas .mesas .card.roxo {
+.praticas .estacoes .estacoes-card .card-item.roxo {
     background-color: var(--roxo-escuro);
+    border: 4px solid var(--roxo-claro);
 }
 
-.praticas .mesas .card.verde {
+.praticas .estacoes .estacoes-card .card-item.verde {
     background-color: var(--verde-escuro);
+    border: 4px solid var(--verde-claro);
 }
 
-.praticas .mesas .card  img{
-  width: 80%;
+.praticas .estacoes .estacoes-card .card-item .card-logo {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.praticas .estacoes .estacoes-card .card-item .card-logo .logo-img{
+    width: 100%;
+}
+
+
+
 
 @media(max-width: 500px) {
     .praticas .titulo {

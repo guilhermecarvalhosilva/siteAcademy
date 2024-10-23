@@ -19,8 +19,6 @@
 }
 
 
-
-
 .empresas .linha {
     position: relative;
     width: 220px;
@@ -85,10 +83,13 @@
 .empresas .card-botao {
     width: 90%;
     height: auto;
+    padding: 5px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0px 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 10px;
     display: none;
 }
 
