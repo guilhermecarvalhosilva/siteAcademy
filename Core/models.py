@@ -62,7 +62,7 @@ class Estacao(models.Model):
     logo = models.ImageField(upload_to=gerar_rota)
     def gerar_rota_icon(self, filename):
         return f'static/images/estacoes/{self.nome}/icon/{filename}'
-    logo = models.ImageField(upload_to=gerar_rota_icon)
+    icon = models.ImageField(upload_to=gerar_rota_icon)
     cor = models.ForeignKey(Paleta_Core, on_delete=models.CASCADE)
     descricao_estacao = models.TextField(max_length=2000)
     texto_funcionamento = models.TextField(max_length=1000)
@@ -76,7 +76,9 @@ class Estacao(models.Model):
     ideal_para1 = models.CharField(max_length=1000)
     ideal_para2 = models.CharField(max_length=1000)
     ideal_para3 = models.CharField(max_length=1000)
-    competencia = models.CharField(max_length=1000)
+    competencia1 = models.CharField(max_length=1000)
+    competencia2 = models.CharField(max_length=1000)
+    competencia3 = models.CharField(max_length=1000)
     
     
 

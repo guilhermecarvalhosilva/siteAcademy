@@ -12,10 +12,9 @@ class Sobre(TemplateView):
 class Contato(TemplateView):
     template_name = 'entrada/contato.html'
 
-class EscolherEstacao(TemplateView):
-    template_name = 'estacoes/escolher_estacao.html'
 
-class EstacaoDetail(DetailView):
+class DetalhesEstacaoView(DetailView):
     model = Estacao
-    template_name = 'estacoes/estacao_detail.html'
-
+    template_name = 'estacoes/detalhes_estacao.html'
+    context_object_name = 'estacao'
+    
