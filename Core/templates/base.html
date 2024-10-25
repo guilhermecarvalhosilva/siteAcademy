@@ -13,8 +13,10 @@
 
     {% if request.path == '/' or request.path == '/core/sobre/' or request.path == '/core/contato/' %}
         <header class="cabecalho" style="background-color: var(--azul-escuro); border-bottom: 2px solid var(--azul-claro);">
-    {% elif request.path == '/core/estacoes/' %}
-    <header class="cabecalho" style="background-color: var(--azul-escuro); border-bottom: 2px solid var(--azul-claro);">
+    {% else %}
+    {% block header %}
+    <header class="cabecalho" style="background-color: {{ paleta_cor.principal }}; border-bottom: 2px solid {{ paleta_cor.secundaria }};">
+    {% endblock %}
     {% endif %}
 
 
@@ -26,7 +28,7 @@
             <nav class="menu-item">
                 <a href="{% url 'homepage' %}" class="item {% if request.path == '/' %}ativo{% endif %}">Home</a>
                 <a href="{% url 'Core:sobre' %}" class="item {% if request.path == '/core/sobre/' %}ativo{% endif %}">Sobre</a>
-                <a href="#" class="item">Estações</a>
+                <a href="#" class="item">Devs</a>
                 <a href="{% url 'Core:contato' %}" class="item {% if request.path == '/core/contato/' %}ativo{% endif %}">Contato</a>
             </nav>
             {% if not user.is_authenticated %}

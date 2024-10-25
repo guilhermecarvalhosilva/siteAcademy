@@ -1,10 +1,18 @@
 {% extends 'base.html' %}
 {% load static %}    
 {% block head %}
+
+{% comment %}
+{% with 'style/pages/'|add:estacao.nome|add:'/'|add:estacao.nome|add:'.css' as estacao_css %}
+    <link rel="stylesheet" href="{% static estacao_css %}">
+{% endwith %}
+{% endcomment %}
     <link rel="stylesheet" href="{% static '/style/pages/get/get.css' %}">
+
+
 {% endblock %}
 {% block title %}
-    GET - Academy
+    {{ estacao.nome }} - Academy
 {% endblock %}
 {% block content %}
     <section class="conteudo1">

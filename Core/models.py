@@ -45,7 +45,8 @@ class Ideal_para(models.Model):
     
     def gerar_rota(self, filename):
         return f'static/images/global/cores/{self.cor.nome}/ideal_para/{filename}'
-
+    
+    alt = models.CharField(max_length=100)
     imagem = models.ImageField(upload_to=gerar_rota)
     
     def __str__(self):
@@ -90,6 +91,8 @@ class Beneficio(models.Model):
     cor = models.ForeignKey(Paleta_Core, on_delete=models.CASCADE)
     def gerar_rota(self, filename):
         return f'static/images/cores/{self.cor.nome}/beneficios/{filename}'
+    
+    alt = models.CharField(max_length=100)
     imagem = models.ImageField(upload_to=gerar_rota)
 
     def __str__(self):
