@@ -41,7 +41,6 @@
 
 .conteudo1{
   display: flex;
-
 }
 
 .titulo{ 
@@ -59,11 +58,11 @@
 
 
 .itens p{
-      color: white;
-      text-align: justify;
-      margin-right: 10rem;
-      padding: 0px 0px 0px 50px;
-  }
+  color: white;
+  text-align: justify;
+  margin-right: 10rem;
+  padding: 0px 0px 0px 50px;
+}
 
 
 .itens{

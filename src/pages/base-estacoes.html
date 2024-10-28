@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/pages/base-estacoes/base-estacoes.css">
+    <title>Estações - Academy</title>
+    <style>
+        /*Variaveis de cores*/
+            :root {
+            --font-padrao: "Poppins", sans-serif;
+            --branco: #fff;
+            --azul-escuro: #1D267D;
+            --azul-medio: #4276BD;
+            --azul-claro: #35BEF0;
+            --verde-escuro: #03A64A;
+            --verde-claro: #64FF1C;
+            --laranja-escuro: #F98439;
+            --laranja-claro: #F2B544;
+            --roxo-escuro: #4D49BF;
+            --roxo-claro: #BE53FF;
+            --cinza-claro: #A2A2A2;
+            --preto: #000;
+        }
+        /*Variaveis de cores*/
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <section class="logo">
+            <img src="../../src/images/global/logo-academy.png" alt="Logo Academy One" class="logo-item">
+        </section>
+
+        <section class="menu">
+            <nav class="menu-item">
+                <a href="#" class="item ativo">Home</a>
+                <a href="#" class="item">Sobre</a>
+                <a href="#" class="item">Mesas</a>
+                <a href="./src/pages/contato.html" class="item">Contato</a>
+            </nav>
+
+            <a href="#" class="botao">Entrar</a>
+        </section>
+
+        <section class="mobile" onclick="menuShow()">
+            <div class="mobile-item"></div>
+            <div class="mobile-item"></div>
+            <div class="mobile-item"></div>
+        </section>
+    </header>
+
+    <main>
+        <section class="principal" style="background-color: var(--roxo-escuro);">
+            <article class="escrita">
+                <h2 class="titulo" style="color: var(--roxo-claro);">Cloud</h2>
+                <p class="paragrafo">
+                    A computação em nuvem oferece serviços como armazenamento de dados, segurança, rede, software e business intelligence via assinatura online.
+                </p>
+                <a href="" class="botao" style="background-color: var(--roxo-claro);">Faça parte da equipe</a>
+            </article>
+            <article class="imagem">
+                <img src="../images/mesas-logo/logo-cloud.png" alt="" class="imagem-item">
+            </article>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <section class="imagem">
+            <img src="../../src/images/global/logo-academy-footer.png" alt="logo academy one footer" class="imagem-item">
+        </section>
+    </footer>
+
+    <script src="../script/menuShow.js"></script> 
+</body>
+</html>
