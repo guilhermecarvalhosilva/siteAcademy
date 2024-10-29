@@ -1,2 +1,5 @@
 @import '../../global/global.css';
-@import './partials/principal.css'
+@import './partials/principal.css';
+@import './partials/funciona.css';
+@import './partials/servicos.css';
+@import './partials/beneficios.css';
