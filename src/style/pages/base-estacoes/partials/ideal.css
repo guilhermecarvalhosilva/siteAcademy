@@ -1,0 +1,55 @@
+.ideal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px 0px;
+    width: 100%;
+    min-width: 300px;
+    padding: 30px 0px;
+}
+
+.ideal .ideal-titulo {
+    font-size: 1.5em;
+}
+
+.ideal .ideal-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0px 35px;
+}
+
+.ideal .ideal-card .card-item {
+    max-width: 380px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    gap: 15px 0px;
+}
+
+.ideal .ideal-card .card-item .card-imagem {
+    max-width: 220px;
+    width: 95%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ideal .ideal-card .card-item .card-imagem .imagem-item {
+    width: 95%;
+}
+
+.ideal .ideal-card .card-item .paragrafo {
+    width: 95%;
+    height: auto;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+

@@ -1,0 +1,45 @@
+.competencias {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    gap: 30px 0px;
+    width: 100%;
+    min-height: 100px;
+    padding: 25px 0px;
+}
+
+.competencias .titulo {
+    font-size: 1.5em;
+}
+
+.competencias .cards {
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 35px;
+}
+
+.competencias .cards .card-item {
+    max-width: 300px;
+    width: 95%;
+    min-height: 150px;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.competencias .cards .card-item .card-paragrafo {
+    color: var(--branco);
+    font-size: 1.1em;
+    font-weight: 600;
+    width: 95%;
+    height: auto;
+    text-align: center;
+}

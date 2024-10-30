@@ -31,5 +31,66 @@
     text-align: center;
 }
 
+.beneficios .card {
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px 0px;
+}
+
+.beneficios .card .titulo-card {
+    font-size: 1.5em;
+}
+
+.beneficios .card .beneficios-card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px 35px;
+}
+
+.beneficios .card .beneficios-card .card-item {
+    max-width: 430px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+.beneficios .card .beneficios-card .card-item .card-imagem {
+    max-width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.beneficios .card .beneficios-card .card-item .card-imagem .imagem-item{
+    width: 100%;
+    height: 100%;
+}
+
+.beneficios .card .beneficios-card .card-item  .card-paragrafo {
+    width: 95%;
+    height: auto;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 500;
+    
+}
+
+
+@media(max-width: 700px) {
+    .beneficios .escrito .escrito-paragrafo {
+        font-size: 0.9em;
+    }
+}
 
 

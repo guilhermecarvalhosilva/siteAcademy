@@ -55,3 +55,54 @@
 .principal .imagem .imagem-item{
     width: 100%;
 }
+
+@media(max-width:750px) {
+    .principal .escrita .paragrafo {
+        font-size: 1em;
+    }
+}
+
+@media(max-width:650px) {
+    .principal {
+        flex-direction: column-reverse;
+        gap: 35px 15px;
+    }
+
+    .principal .imagem {
+        max-width: 60%;
+    }
+
+    .principal .escrita  {
+        align-items: center;
+        max-width: 70%;
+    }
+    .principal .escrita .titulo{
+        font-size: 1.8em;
+    }
+
+    .principal .escrita .paragrafo{
+        text-align: center;
+    }
+}
+
+@media(max-width: 435px) {
+    .principal .imagem {
+        max-width: 75%;
+    }
+
+
+    .principal .escrita  {
+        max-width: 95%;
+    }
+
+    .principal .escrita .paragrafo{
+        text-align: center;
+        font-size: 0.9em;
+    }
+
+    .principal .escrita .botao{
+        max-width: 200px;
+        font-size: 0.9em;
+
+    }
+}
