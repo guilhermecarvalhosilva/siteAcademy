@@ -26,6 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Homepage.as_view(), name="homepage"),
     path('core/', include("Core.urls")),
+    path('dashboard/', include("Dashboard.urls")),
 ]
 
 # Adicione esta linha no final do arquivo, fora da lista urlpatterns

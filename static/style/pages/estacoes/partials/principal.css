@@ -1,0 +1,57 @@
+.principal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    padding: 50px 0px;
+    gap: 0px 15px;
+}
+
+.principal .escrita {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px 0px;
+    height: auto;
+    max-width: 50%;
+    width: 98%;
+}
+
+.principal .escrita .titulo{
+    font-size: 1.5em;
+}
+
+.principal .escrita .paragrafo{
+    width: 95%;
+    height: auto;
+    font-size: 1.1em;
+    color: var(--branco);
+}
+
+.principal .escrita .botao{
+    max-width: 250px;
+    width: 95%;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--branco);
+}
+
+.principal .imagem{
+    max-width: 35%;
+    width: 98%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal .imagem .imagem-item{
+    width: 100%;
+}

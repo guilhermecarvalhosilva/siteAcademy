@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #app propio
     'Core',
+    'Dashboard',
 ]
 
 MIDDLEWARE = [
@@ -160,3 +161,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
+
+
+LOGIN_REDIRECT_URL = 'homepage'

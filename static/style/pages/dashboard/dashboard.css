@@ -1,0 +1,158 @@
+@import '../../global/global.css';
+
+main {
+    margin: 100px 50px;
+    
+}
+
+.cards {
+    display: flex;
+    justify-content: center; /* Centraliza os cards */
+    margin-bottom: 20px; /* Aumentado o espaçamento entre os cards e as barras */
+}
+
+.card {
+    background: white;
+    width: 140px; /* Largura do card */
+    height: 140px; /* Altura do card */
+    padding: 10px; /* Padding padrão */
+    border-radius: 5px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra à direita */
+    margin: 0 5px; /* Margem bem reduzida */
+    text-align: center;
+    border-top: none; /* Remove a borda superior */
+    border-bottom: none; /* Remove a borda inferior */
+    border-left: none; /* Remove a borda esquerda */
+}
+
+.card span {
+    font-size: 24px; /* Tamanho do número aumentado */
+    display: block; /* Para que o número fique em uma linha separada */
+    font-weight: bold; /* Para destacar o número */
+    color: #888; /* Cor cinza para o texto */
+}
+
+#completed-projects span {
+    color: green; /* Verde para concluídos */
+}
+
+#delayed-projects span {
+    color: red; /* Vermelho para atrasados */
+}
+
+.filters {
+    display: flex;
+    justify-content: flex-start; /* Alinhamento à esquerda */
+    margin-bottom: 20px; /* Aumentado o espaçamento abaixo das barras */
+}
+
+.filter {
+    width: 10%; /* Diminuído o tamanho da barra de filtro para 10% */
+    margin-right: 10px; /* Espaçamento entre as barras */
+}
+
+.search {
+    width: 25%; /* Aumentado o tamanho da barra de pesquisa para 25% */
+}
+
+input, select {
+    width: 100%; /* Largura total */
+    padding: 8px; /* Ajustado para ser mais compacto */
+    margin: 5px 0;
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 3px;
+    color: #888; /* Cor cinza para o texto */
+    text-align: left; /* Alinhamento do texto à esquerda na barra de pesquisa */
+}
+
+select {
+    background-color: white; /* Fundo branco para o select */
+    text-align: center; /* Centraliza o texto no select */
+}
+
+table {
+    width: 100%; /* Para garantir que a tabela ocupe toda a largura disponível */
+    border-collapse: collapse; /* Para evitar espaçamentos entre células */
+}
+
+th, td {
+    padding: 10px; /* Adiciona espaçamento interno às células */
+    border-top: 1px solid #ddd; /* Adiciona borda apenas na parte superior */
+    border-bottom: 1px solid #ddd; /* Adiciona borda na parte inferior */
+    border-left: none; /* Remove a borda esquerda */
+    border-right: none; /* Remove a borda direita */
+}
+
+th {
+    background-color: #28a745; /* Verde para o cabeçalho */
+    color: white; /* Texto em branco para melhor contraste */
+    font-weight: bold; /* Destaque para o texto do cabeçalho */
+    text-align: center; /* Centraliza o texto do cabeçalho */
+}
+
+
+td {
+    text-align: center; /* Alinha o texto à esquerda nas células */
+}
+
+
+
+
+
+.button-container {
+    text-align: right; /* Alinha o botão à direita */
+    margin-top: 10px; /* Espaçamento acima do botão */
+}
+
+.search-button {
+    background-color: #28a745; /* Cor de fundo verde */
+    color: white; /* Texto branco */
+    border: none; /* Sem borda */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+.search-button:hover {
+    background-color: #218838; /* Cor um pouco mais escura ao passar o mouse */
+}
+
+.progress-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 50px; /* Ajuste o valor conforme necessário para mover mais para a direita */
+}
+
+
+.progress-container {
+    background-color: #ccc;
+    border-radius: 5px;
+    height: 10px; /* Altura da barra */
+     width: 100px; /* Ajuste para o tamanho desejado */
+    margin-right: 15px; /* Espaço entre a barra e o número */
+}
+
+.progress-bar {
+    background-color: green;
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.3s; /* Suaviza a transição da barra */
+}
+
+span {
+    font-weight: bold; /* Destaca o número */
+    text-align: center; /* Alinha o texto ao centro */
+    min-width: 30px; /* Largura mínima para garantir que o texto fique centralizado */
+    margin-right: 15px; /* Aumentar espaço entre o número e o ícone */
+}
+
+.search-button {
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    color: inherit; /* Cor do ícone herda do elemento pai */
+    font-size: 16px; /* Tamanho do ícone */
+    display: flex; /* Alinha o ícone centralmente */
+    align-items: center; /* Centraliza verticalmente */
+}

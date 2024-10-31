@@ -1,132 +1,169 @@
 {% extends 'base.html' %}
-{% load static %}    
+{% load static %}
 {% block head %}
-
-{% comment %}
-{% with 'style/pages/'|add:estacao.nome|add:'/'|add:estacao.nome|add:'.css' as estacao_css %}
-    <link rel="stylesheet" href="{% static estacao_css %}">
-{% endwith %}
-{% endcomment %}
-    <link rel="stylesheet" href="{% static '/style/pages/get/get.css' %}">
-
-
+    <link rel="stylesheet" href="{% static 'style\pages\estacoes\detalhes_estacao.css' %}">
+    <style>
+        /*Variaveis de cores*/
+            :root {
+            --font-padrao: "Poppins", sans-serif;
+            --branco: #fff;
+            --azul-escuro: #1D267D;
+            --azul-medio: #4276BD;
+            --azul-claro: #35BEF0;
+            --verde-escuro: #03A64A;
+            --verde-claro: #64FF1C;
+            --laranja-escuro: #F98439;
+            --laranja-claro: #F2B544;
+            --roxo-escuro: #4D49BF;
+            --roxo-claro: #BE53FF;
+            --cinza-claro: #A2A2A2;
+            --preto: #000;
+        }
+        /*Variaveis de cores*/
+    </style>
 {% endblock %}
 {% block title %}
-    {{ estacao.nome }} - Academy
+    Estações - Academy
 {% endblock %}
 {% block content %}
-    <section class="conteudo1">
-        <div class="titulo">
-            <h1>{{ estacao.nome }}</h1>
-            <div class="itens">
-                <p> {{ estacao.descricao_estacao }} </p>
-                <img src="{{ estacao.logo.url }}" alt="{{ estacao.nome }}">
-        </div>
-        <div class="botao-conteudo1">
-            <a href="{% url 'Core:contato' %}" style="color: white;text-decoration: none;">
-                <button>
-                        Faça Parte da Equipe
-                    </button>
-                </a>
-        </div>
-        </div>
-    </section>
- 
-    <div class="conteudo-2">
-        <h2>Como Funciona?</h2>
-        <p>{{ estacao.texto_funcionamento }}
-        </p>
-    </div>
+    <main>
+        <section class="principal" style="background-color: var(--roxo-escuro);">
+            <article class="escrita">
+                <h2 class="titulo" style="color: var(--roxo-claro);">Cloud</h2>
+                <p class="paragrafo">
+                    A computação em nuvem oferece serviços como armazenamento de dados, segurança, rede, software e business intelligence via assinatura online.
+                </p>
+                <a href="" class="botao" style="background-color: var(--roxo-claro);">Faça parte da equipe</a>
+            </article>
+            <article class="imagem">
+                <img src="/images/mesas-logo/logo-cloud.png" alt="" class="imagem-item">
+            </article>
+        </section>
 
-    <div class="get_main_serv">
+        <section class="funciona">
+            <h2 class="titulo" style="color: var(--roxo-claro);">Como funciona?</h2>
+            <p class="paragrafo">A mesa opera como um hub dinâmico, focado em capacitar os alunos a dominarem a criação de aplicativos low code. Aqui, eles aprendem a conceber soluções inovadoras, implementar sistemas eficientes usando a abordagem low code e a desenvolver programação de inteligência artificial para chatbots. Além disso, os participantes têm a oportunidade de aprimorar suas habilidades na gestão de business intelligence, proporcionando uma experiência prática e abrangente no desenvolvimento de tecnologias avançadas.</p>
+        </section>
 
-        <div id="get_main_serve">
-            <h3>Serviços</h3>
+        <section class="servicos" style="background-color: var(--roxo-escuro);">
+            <h2 class="titulo" style="color: var(--roxo-claro);">Serviços</h2>
+            <div class="servicos-card">
+                <article class="servicos-item" >
+                    <div class="servicos-imagem" style="background-color: var(--roxo-claro);">
+                        <img src="../images/global/servicos/serv1.png" alt="" class="imagem-item">
+                    </div>
+                    <p class="servico-paragrafo">Desenvolvimento de Aplicativos Low Code</p>
+                </article>
+                <article class="servicos-item">
+                    <div class="servicos-imagem" style="background-color: var(--roxo-claro);">
+                        <img src="../images/global/servicos/serv2.png" alt="" class="imagem-item">
+                    </div>
+                    <p class="servico-paragrafo">Desenvolvimento de Aplicativos Low Code</p>
+                </article>
+                <article class="servicos-item">
+                    <div class="servicos-imagem" style="background-color: var(--roxo-claro);">
+                        <img src="../images/global/servicos/serv3.png" alt="" class="imagem-item">
+                    </div>
+                    <p class="servico-paragrafo">Desenvolvimento de Aplicativos Low Code</p>
+                </article>
+            </div>
+        </section>
 
-            <div class="get_main_services">
+        <section class="beneficios">
+            <article class="escrito">
+                <h2 class="escrito-titulo" style="color: var(--roxo-claro);">Resposabilidade</h2>
+                <p class="escrito-paragrafo">
+                    Os alunos desempenham um papel ativo e responsável. Eles aplicam prontamente os conhecimentos adquiridos, criando soluções práticas como aplicativos low code e sistemas, e programando inteligência artificial para chatbots. A colaboração e inovação são incentivadas, assim como a gestão eficiente de projetos. Participam ativamente de atividades de business intelligence, aplicando análise crítica para extrair insights valiosos. Assumindo essas responsabilidades, os alunos enriquecem sua experiência e contribuem para o sucesso coletivo da mesa.
+                </p>
+            </article>
 
-                <div class="get_main_wrapper">
-                    <div class="get_main_circulo"><img id="get_main_img" src="{% static '/images/global/servicos/serv1.png' %}"></div>
-                    <p id="get_main_box">Otimização Educacional</p>
-                </div>
+            <article class="card">
+                <h2 class="titulo-card" style="color: var(--roxo-claro);">Beneficios</h2>
+                <div class="beneficios-card">
+                    <div class="card-item">
+                        <div class="card-imagem">
+                            <img src="../images/global/beneficios/beneficios-roxo01.png" alt="" class="imagem-item">
+                        </div>
+                        <p class="card-paragrafo">Experiência Prática e Aplicação de Conhecimento</p>
+                    </div>
 
-                <div class="get_main_wrapper">
-                    <div class="get_main_circulo"><img id="get_main_img" src="{%static '/images/global/servicos/serv2.png'%}"></div>
-                    <div class="get_main_boxboxRight">
-                        <p id="get_main_box">Suporte Personalizado</p>
+                    <div class="card-item">
+                        <div class="card-imagem">
+                            <img src="../images/global/beneficios/beneficios-roxo02.png" alt="" class="imagem-item">
+                        </div>
+                        <p class="card-paragrafo">Experiência Prática e Aplicação de Conhecimento</p>
+                    </div>
+
+                    <div class="card-item">
+                        <div class="card-imagem">
+                            <img src="../images/global/beneficios/beneficios-roxo03.png" alt="" class="imagem-item">
+                        </div>
+                        <p class="card-paragrafo">Experiência Prática e Aplicação de Conhecimento</p>
                     </div>
                 </div>
-                <div class="get_main_wrapper">
-                    <div class="get_main_circulo"><img id="get_main_img" src="{% static '/images/global/servicos/serv3.png' %}"></div>
-                    <div class="get_main_boxboxRight">
-                        <p id="get_main_box">Desempenho Aprimorado</p>
+            </article>
+        </section>
+
+        <section class="equipes">
+            <article class="carrossel-titulo">
+                <h2 class="titulo-item" style="color: var(--roxo-claro);">Equipes</h2>
+            </article>
+            <article class="imagens-carrossel">
+                <i>
+                    <input checked type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=1');" title="Random Picture 1">
+                    <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=2');" title="Random Picture 2">
+                    <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=3');" title="Random Picture 3">
+                    <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=4');" title="Random Picture 4">
+                    <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=5');" title="Random Picture 5">
+                </i>
+            </article>
+        </section>
+
+        <section class="ideal">
+            <h2 class="ideal-titulo" style="color: var(--roxo-claro);">Ideial para</h2>
+
+            <article class="ideal-card">
+                <div class="card-item">
+                    <div class="card-imagem">
+                        <img src="../images/global/ideial/ideal-roxo01.png" alt="ideal1" class="imagem-item">
                     </div>
+                    <p class="paragrafo">Pessoas criativas com uma olhar artistico para o mundo.</p>
                 </div>
-            </div>
-        </div>
-    </div>
 
+                <div class="card-item">
+                    <div class="card-imagem">
+                        <img src="../images/global/ideial/ideal-roxo02.png" alt="ideal2" class="imagem-item">
+                    </div>
+                    <p class="paragrafo">Pessoas criativas com uma olhar artistico para o mundo. </p>
+                </div>
 
-    <div class="conteudo-2">
-        <h2>Responsabilidades</h2>
-        <p> Nossas responsabilidades incluem otimizar a gestão escolar, promovendo a eficácia operacional e criando um ambiente educacional positivo. Além disso, oferece orientação personalizada por meio de suporte de tutoria, adaptado às necessidades específicas de cada aluno, visando ao desenvolvimento acadêmico e pessoal. A equipe também se compromete com o monitoramento contínuo do desempenho dos alunos, implementando estratégias para melhorias constantes, garantindo assim uma jornada educacional de sucesso e crescimento holístico."
-        </p>
-    </div>
-    <div class="beneficios">
-        <div class="beneficios-titulo">
-            <h2>Benefícios</h2>
-        </div>
-        <div class="beneficios-imagens">
-            <div class="beneficio">
-                <img src="{% static '/images/global/beneficios/beneficios-verde01.png' %}" alt="Benefício 1">
-                <p>Crescimento individual e coletivo</p>
-            </div>
-            <div class="beneficio">
-                <img src="{% static '/images/global/beneficios/beneficios-verde02.png' %}" alt="Benefício 2">
-                <p>Gestão Organizada de registros e documentos</p>
-            </div>
-            <div class="beneficio">
-                <img src="{% static '/images/global/beneficios/beneficios-verde03.png' %}" alt="Benefício 2">
-                <p>Alinhamento com metas da equipe e objetivos organizacionais</p>
-            </div>
+                <div class="card-item">
+                    <div class="card-imagem">
+                        <img src="../images/global/ideial/ideal-roxo03.png" alt="ideal2" class="imagem-item">
+                    </div>
+                    <p class="paragrafo">Pessoas criativas com uma olhar artistico para o mundo. </p>
+                </div>
+            </article>
+        </section>
 
-        </div>
-    </div>
-    
-<section class="equipes">
-    <div class="carrossel-titulo">
-    <h2>Equipes</h2>
-</div>
-<div class="imagens-carrossel">
-    <i>
-        <input checked type="radio" name="s" style="background-image: url('../images/pages/carrossel/equipe.png');" title="Random Picture 1">
-        <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=2');" title="Random Picture 2">
-        <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=3');" title="Random Picture 3">
-        <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=4');" title="Random Picture 4">
-        <input type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=5');" title="Random Picture 5">
-    </i>
-</div>
-</section>
-    <div class="ideal-para">
-        <div class="ideal-para-titulo">
-            <h2>Ideal Para</h2>
-        </div>
-        <div class="ideal-imagens">
-            <div class="ideal">
-                <img src="{% static '/images/global/ideial/ideal-verde01.png' %}" alt="ideal1">
-                <p>Alunos com habilidades sólidas de comunicação</p>
-            </div>
-            <div class="ideal">
-                <img src="{% static '/images/global/ideial/ideal-verde02.png' %}" alt="ideal2">
-                <p>Aqueles que têm empatia e habilidades colaborativas, pois o RH muitas vezes envolve lidar com questões pessoais e promover um ambiente de trabalho harmonioso.</p>
-            </div>
-            <div class="ideal">
-                <img src="{% static '/images/global/ideial/ideal-verde03.png' %}" alt="ideal3">
-                <p>Estudantes que têm interesse em questões jurídicas relacionadas ao emprego e regulamentações empresariais.</p>
-            </div>
-        </div>
-    </div>
+        <section class="competencias">
+            <h2 class="titulo" style="color: var(--roxo-claro);">Competências desenvolvidas</h2>
+            <article class="cards">
+                <div class="card-item" style="background-color: var(--roxo-claro); border: 5px solid var(--roxo-escuro);">
+                    <p class="card-paragrafo">Desenvolver aplicativos</p>
+                </div>
+
+                <div class="card-item" style="background-color: var(--roxo-claro); border: 5px solid var(--roxo-escuro);">
+                    <p class="card-paragrafo">Desenvolver aplicativos</p>
+                </div>
+
+                <div class="card-item" style="background-color: var(--roxo-claro); border: 5px solid var(--roxo-escuro);">
+                    <p class="card-paragrafo">Desenvolver aplicativos</p>
+                </div>
+            </article>
+        </section>
+    </main>
 {% endblock %}
 {% block js %}
-<script src="{% static '/script/menuShow.js' %}"></script>
+<script src="../script/menuShow.js"></script> 
 {% endblock %}
