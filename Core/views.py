@@ -5,6 +5,9 @@ from .models import Estacao, Paleta_Core, Servico, Beneficio, Imagens_equipe
 class Homepage(TemplateView):
     template_name = 'entrada/index.html'
 
+class Desenvolvedores(TemplateView):
+    template_name = 'entrada/desenvolvedores.html'
+
 
 class Sobre(TemplateView):
     template_name = 'entrada/sobre.html' 

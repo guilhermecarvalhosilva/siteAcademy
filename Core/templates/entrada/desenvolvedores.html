@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/style/pages/desenvolvedores/desenvolvedores.css' %}">
+    <title>Academy One - Depoimentos</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <section class="logo">
+            <img src="{% static 'images\global\logo_academy\logo-academy.png' %}" alt="Logo Academy One" class="logo-item">
+        </section>
+
+        <section class="menu">
+            <nav class="menu-item">
+                <a href="{% url 'homepage' %}" class="item">Home</a>
+                <a href="#" class="item">Sobre</a>
+                <a href="#" class="item">Mesas</a>
+                <a href="{% url 'Core:contato' %}" class="item">Contato</a>
+                <a href="{% url 'Core:desenvolvedores' %}" class="item ativo">Desenvolvedores</a>
+            </nav>
+
+            <a href="#" class="botao">Entrar</a>
+        </section>
+
+        <section class="mobile" onclick="menuShow()">
+            <div class="mobile-item"></div>
+            <div class="mobile-item"></div>
+            <div class="mobile-item"></div>
+        </section>
+    </header>
+
+    <main class="conteudo-desenvolvedores">
+        <section class="card-titulo">
+            <h1 class="titulo-item">Desenvolvedores</h1>
+        </section>
+        <section class="card-desenvolvedores">
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://www.designi.com.br/images/preview/12161378.jpg" alt="Imagem de Perfil" class="imagem-item">
+                </div>
+                <p class="name">Mak</p>
+                <p class="paragrafo">Gestor</p>
+                <p class="paragrafo">
+                    O gestor de projetos coordena equipes e recursos para garantir que os objetivos sejam alcançados de forma eficiente, planejando e monitorando cada etapa do projeto.</p>
+                <div class="socials">
+                 <a href="https://github.com/" target="_blank"> <button class="botao"><i class="bi bi-github icon github"></i></button></a>
+                  <a href="https://br.linkedin.com/in/kau%C3%A3-sousa-santos-455145291" target="_blank"><button class="botao"><i class="bi bi-linkedin icon linkedin"></i></button></a> 
+                </div>
+            </div>
+        
+          <div class="card">
+                <div class="card-image">
+                    <img src="https://www.designi.com.br/images/preview/12161378.jpg" alt="Imagem de Perfil" class="imagem-item">
+                </div>
+                <p class="name">Nathan Ferraz</p>
+                <p class="paragrafo">Gestor</p>
+                <p class="paragrafo">
+                    O gestor de projetos coordena equipes e recursos para garantir que os objetivos sejam alcançados de forma eficiente, planejando e monitorando cada etapa do projeto.</p>
+                <div class="socials">
+                    <a href="https://github.com/nathanrock" target="_blank"> <button class="botao"><i class="bi bi-github icon github"></i></button></a>
+                    <a href="https://www.linkedin.com/in/nathan-ferraz-529146291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"> <button class="botao"><i class="bi bi-linkedin icon linkedin"></i></button></a> 
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://www.designi.com.br/images/preview/12161378.jpg" alt="Imagem de Perfil" class="imagem-item">
+                </div>
+                <p class="name">Irley Viera</p>
+                <p class="paragrafo">Front-end</p>
+                <p class="paragrafo">Um programador front-end é o arquiteto das emoções digitais, moldando a experiência visual de websites e aplicações com maestria em HTML, CSS e JavaScript.</p>
+                <div class="socials">
+                    <a href="https://github.com/irleyvieira" target="_blank"> <button class="botao"><i class="bi bi-github icon github"></i></button></a>
+                    <a href="https://www.linkedin.com/in/irley-vieira-maia-4186642b7/?originalSubdomain=br" target="_blank"> <button class="botao"><i class="bi bi-linkedin icon linkedin"></i></button></a> 
+                </div>
+            </div>
+        
+           <div class="card">
+                <div class="card-image">
+                    <img src="https://www.designi.com.br/images/preview/12161378.jpg" alt="Imagem de Perfil" class="imagem-item">
+                </div>
+                <p class="name">Kauã Sousa</p>
+                <p class="paragrafo">Front-end</p>
+                <p class="paragrafo">Um programador front-end é o arquiteto das emoções digitais, moldando a experiência visual de websites e aplicações com maestria em HTML, CSS e JavaScript.</p>
+                <div class="socials">
+                    <a href="https://github.com/Kasousa01" target="_blank"> <button class="botao"><i class="bi bi-github icon github"></i></button></a>
+                    <a href="https://www.linkedin.com/in/kau%C3%A3-sousa-santos-455145291/" target="_blank"> <button class="botao"><i class="bi bi-linkedin icon linkedin"></i></button></a> 
+                </div>
+            </div>
+        
+           <div class="card">
+                <div class="card-image">
+                    <img src="https://www.designi.com.br/images/preview/12161378.jpg" alt="Imagem de Perfil" class="imagem-item">
+                </div>
+                <p class="name">Pedro Rocha</p>
+                <p class="paragrafo">Front-end</p>
+                <p class="paragrafo">Um programador front-end é o arquiteto das emoções digitais, moldando a experiência visual de websites e aplicações com maestria em HTML, CSS e JavaScript.+</p>
+                <div class="socials">
+                    <a href="https://github.com/PedroAraujo88" target="_blank"> <button class="botao"><i class="bi bi-github icon github"></i></button></a>
+                    <a href="https://www.linkedin.com/in/pedro-henrique-de-araujo-rocha-663292284/?originalSubdomain=br" target="_blank"> <button class="botao"><i class="bi bi-linkedin icon linkedin"></i></button></a> 
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://www.designi.com.br/images/preview/12161378.jpg" alt="Imagem de Perfil" class="imagem-item">
+                </div>
+                <p class="name"> Guilherme Carvalho</p>
+                <p class="paragrafo">Front-end</p>
+                <p class="paragrafo">Um programador front-end é o arquiteto das emoções digitais, moldando a experiência visual de websites e aplicações com maestria em HTML, CSS e JavaScript.</p>
+                <div class="socials">
+                    <a href="https://github.com/guilhermecarvalhosilva" target="_blank"> <button class="botao"><i class="bi bi-github icon github"></i></button></a>
+                    <a href="https://www.linkedin.com/in/guilhermecarvalhodasilva/" target="_blank"> <button class="botao"><i class="bi bi-linkedin icon linkedin"></i></button></a> 
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://www.designi.com.br/images/preview/12161378.jpg" alt="Imagem de Perfil" class="imagem-item">
+                </div>
+                <p class="name">Murillo Mendes</p>
+                <p class="paragrafo">Front-end e Documentação</p>
+                <p class="paragrafo">Um programador front-end é o arquiteto das emoções digitais, moldando a experiência visual de websites e aplicações com maestria em HTML, CSS e JavaScript.</p>
+                <div class="socials">
+                    <a href="https://github.com/Mdragon777" target="_blank"> <button class="botao"><i class="bi bi-github icon github"></i></button></a>
+                    <a href="https://www.linkedin.com/in/murillo-mendes-rodrigues" target="_blank"> <button class="botao"><i class="bi bi-linkedin icon linkedin"></i></button></a> 
+                </div>
+            </div>
+        
+         <div class="card">
+                <div class="card-image">
+                    <img src="{% static 'images\pages\desenvolvedores\imagem-giovani.jpg' %}" alt="Imagem de Perfil" class="imagem-item">
+                </div>
+                <p class="name">Giovani Dantas</p>
+                <p class="paragrafo">Back-end</p>
+                <p class="paragrafo">
+                    O back-end é a força invisível que gerencia servidores e bancos de dados, utilizando linguagens como Python e Java para garantir que as aplicações funcionem corretamente.</p>
+                <div class="socials">
+                    <a href="https://github.com/Giovani-Dantas-Braconi" target="_blank"> <button class="botao"><i class="bi bi-github icon github"></i></button></a>
+                    <a href="https://www.linkedin.com/in/giovani-dantas-braconi/" target="_blank"> <button class="botao"><i class="bi bi-linkedin icon linkedin"></i></button></a> 
+                </div>
+            </div>
+        
+           
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://www.designi.com.br/images/preview/12161378.jpg" alt="Imagem de Perfil" class="imagem-item">
+                </div>
+                <p class="name">Enzo Spada</p>
+                <p class="paragrafo">Documentação</p>
+                <p class="paragrafo">
+                    O documentador cria e mantém a documentação clara e acessível de projetos, facilitando a comunicação e garantindo que o conhecimento seja compartilhado entre as equipes.</p>
+                <div class="socials">
+                    <a href="https://github.com/JxF0uL" target="_blank"> <button class="botao"><i class="bi bi-github icon github"></i></button></a>
+                    <a href="https://br.linkedin.com/in/enzo-spada-ramalho-497aa61a9" target="_blank"> <button class="botao"><i class="bi bi-linkedin icon linkedin"></i></button></a> 
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://www.designi.com.br/images/preview/12161378.jpg" alt="Imagem de Perfil" class="imagem-item">
+                </div>
+                <p class="name">Luiz Lima</p>
+                <p class="paragrafo">Documentação</p>
+                <p class="paragrafo">
+                    O documentador cria e mantém a documentação clara e acessível de projetos, facilitando a comunicação e garantindo que o conhecimento seja compartilhado entre as equipes.</p>
+                <div class="socials">
+                    <a href="https://github.com/ReTr07229" target="_blank"> <button class="botao"><i class="bi bi-github icon github"></i></button></a>
+                    <a href="https://www.linkedin.com/in/luiz-henrique-lima-rodrigues-a82296283/?locale=en_US" target="_blank"> <button class="botao"><i class="bi bi-linkedin icon linkedin"></i></button></a> 
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <section class="imagem">
+            <img src="{% static 'images\global\logo_academy\logo-academy.png' %}" alt="logo academy one footer" class="imagem-item">
+        </section>
+    </footer>
+
+    <script src="{% static '/script/global/menuShow.js' %}"></script>
+</body>
+</html>

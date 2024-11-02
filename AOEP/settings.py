@@ -156,7 +156,16 @@ AUTHENTICATION_BACKENDS = [
 SOCIALACCOUNT_PROVIDERS = {}
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  
+EMAIL_PORT = 587 
+EMAIL_USE_TLS = True  
+EMAIL_HOST_USER = 'giovanidbraconi@gmail.com'  # Seu email
+EMAIL_HOST_PASSWORD = 'GiovaniGames10Br'  # Senha de aplicativo (no caso do Gmail)
+
+# Configurações adicionais para o remetente
+DEFAULT_FROM_EMAIL = 'giovanidbraconi@gmail.com'  # Email padrão que aparecerá como remetente
+SERVER_EMAIL = 'giovanidbraconi@gmail.com'  # Email usado para enviar erros do servidor
 
 
 ACCOUNT_AUTHENTICATION_METHOD = 'email'

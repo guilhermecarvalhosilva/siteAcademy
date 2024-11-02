@@ -13,3 +13,9 @@ class Index_dashboard(ListView):
     template_name = "index_dashboard.html"
     model = Projeto
     context_object_name = "projetos"
+
+
+class Base(ListView):
+    template_name = "bases/menu_lateral.html"
+    model = Projeto
+    context_object_name = "projetos"

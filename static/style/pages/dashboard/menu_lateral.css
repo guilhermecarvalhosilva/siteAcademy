@@ -13,85 +13,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.title{
-    font-size: 22px;
-    
-}
-.project{
-    color: gray;
-    margin-top: -10px;
-}
-.titulo{
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-    margin-top: 2rem;
-}
-.texto{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    color: gray;
-}
 
-.dashboard {
-    width: calc(100% - 80px); /* largura ajustada para evitar o menu lateral */
-    margin: 0 ; /* remove margens extras */
-    padding: 0 1rem; /* ajusta padding lateral */
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* centraliza os cards */
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 2rem;
-}
-
-.card {
-    width: calc(28.33% - 20px);
-    height: 17rem;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.circle {
-    width: 90px;
-    height: 90px;
-    margin: 0 auto 15px;
-    background-color: blue;
-    border-radius: 50%;
-}
-
-
-.title {
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-    color: #333;
-}
-
-.btn {
-    padding: 13px 60px;
-    background-color: rgb(133, 133, 255);
-    border: none;
-    border-radius: 20px;
-    color:  white;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-
-}
-
-.btn:hover {
-    background-color: #87cefa;
-}
-  
 
 button {
     border: none;
@@ -117,8 +39,8 @@ li {
 
 /*body*/
 body {
-    background-color: white;
-    color: black; 
+    background-color: var(--body-bg-color);
+    color: var(--text-color); 
     width: 100vw; 
     height: auto; 
     font-family: 'Poppins', sans-serif;
@@ -384,15 +306,3 @@ img{
         font-size: 1.7rem;
     }
 }  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .card {
-      width: calc(50% - 20px);
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .card {
-      width: 100%;
-    }
-  }
