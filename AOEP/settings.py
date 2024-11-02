@@ -161,7 +161,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587 
 EMAIL_USE_TLS = True  
 EMAIL_HOST_USER = 'giovanidbraconi@gmail.com'  # Seu email
-EMAIL_HOST_PASSWORD = 'GiovaniGames10Br'  # Senha de aplicativo (no caso do Gmail)
+EMAIL_HOST_PASSWORD = 'skdjskdjksjd'  # Senha de aplicativo (no caso do Gmail)
 
 # Configurações adicionais para o remetente
 DEFAULT_FROM_EMAIL = 'giovanidbraconi@gmail.com'  # Email padrão que aparecerá como remetente
