@@ -51,7 +51,7 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px 35px;
+    gap: 35px 35px;
 }
 
 .beneficios .card .beneficios-card .card-item {
