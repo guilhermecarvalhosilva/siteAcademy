@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste de Modelos</title>
+</head>
+<body>
+    <h1>Teste de Modelos</h1>
+
+    <h2>Estações</h2>
+    {% for estacao in estacoes %}
+        <div>
+            <h3>{{ estacao.nome }}</h3>
+            <img src="{{ estacao.logo.url }}" alt="{{ estacao.nome }} logo">
+            <p>Descrição: {{ estacao.descricao_estacao }}</p>
+            <p>Texto Funcionamento: {{ estacao.texto_funcionamento }}</p>
+        </div>
+    {% endfor %}
+
+    <h2>Servico</h2>
+    {% for estacao in estacoes %}
+        <p> {{estacao.servico1}} </p>
+    {% endfor %}
+    {% for estacao in estacoes %}
+    <p> {{estacao.servico2}} </p>
+{% endfor %}
+{% for estacao in estacoes %}
+<p> {{estacao.servico3}} </p>
+{% endfor %}
+
+    <h2>Benefícios</h2>
+    {% for beneficio in beneficios %}
+        <div>
+            <h3>{{ beneficio.alt }}</h3>
+            <img src="{{ beneficio.imagem.url }}" alt="{{ beneficio.alt }}">
+            <p>Cor: {{ beneficio.cor.nome }}</p>
+        </div>
+    {% endfor %}
+
+    <h2>responsabilidade</h2>
+        {% for estacao in estacoes %}
+            <p>
+                {{ estacao.responsabilidade }}
+            </p>
+        {% endfor %}
+
+
+    <h2>Imagens Equipe</h2>
+    {% for imagem_equipe in imagens_equipes %}
+        <div>
+            <img src="{{ imagem_equipe.imagem.url }}" alt="{{ imagem_equipe.alt }}">
+            <p>Estação: {{ imagem_equipe.estacao.nome }}</p>
+        </div>
+    {% endfor %}
+
+    <h2>Imagens Benefícios Cores</h2>
+    {% for img_beneficio_core in imagens_beneficios_cores %}
+        {% for estacao in estacoes %}
+        <div>
+            <img src="{{ img_beneficio_core.imagem.url }}" alt="{{ img_beneficio_core.alt }}">
+            <p>Beneficios: {{ estacao.beneficio1 }}</p>
+        </div>
+    {% endfor %}
+    {% endfor %}
+
+    <h2>Ideal para</h2>
+    {% for ideal in ideais_para %}
+        <div>
+            <h3>{{ ideal.alt }}</h3>
+            <img src="{{ ideal.imagem.url }}" alt="{{ ideal.alt }}">
+            <p>Cor: {{ ideal.cor.nome }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
