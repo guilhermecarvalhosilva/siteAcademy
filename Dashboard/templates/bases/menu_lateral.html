@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Menu Lateral</title>
+        <title>{% block title %}{% endblock %}</title>
 
         <!--fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,9 +14,9 @@
 
         <!--css-->
         <link rel="stylesheet" href="{% static 'style\pages\dashboard\menu_lateral.css' %}">
+        {% block head %}
+        {% endblock %}
 
-        <!--js-->
-        <script src="{% static 'script\pages\dashboard\index_estacao\menu_lateral.js' %}" defer></script>
     </head>
     <body>
         <!--aside bar-->
@@ -63,5 +63,10 @@
                 </a>
             </div>
         </nav>
+        {% block content %}
+        {% endblock %}
     </body>
 </html>
+<script src="{% static 'script\pages\dashboard\menu_lateral.js' %}" defer></script>
+{% block js %}
+{% endblock %}

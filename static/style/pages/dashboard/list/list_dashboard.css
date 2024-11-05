@@ -1,0 +1,248 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinhando à esquerda */
+    margin-bottom: 10px;
+    width: 100%; /* Garante que o header ocupe toda a largura */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinhando à esquerda */
+    flex-grow: 1; /* Permite que o conteúdo interno cresça e ocupe espaço */
+    margin-left: 60px; /* Aumente esse valor para mover o h1 mais para a direita */
+}
+
+
+.logo {
+    width: 50px; 
+    height: auto;
+    margin-right: 10px;
+}
+
+
+.cards {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha */
+}
+
+.card {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    background: white;
+    width: 200px; 
+    height: 100px; 
+    padding: 10px; 
+    border-radius: 5px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    margin: 0 5px; 
+    text-align: center; 
+}
+
+.card span {
+    font-size: 24px; 
+    display: block; 
+    font-weight: bold; 
+    color: #888; 
+    line-height: 1.2; 
+    margin: 0; 
+}
+
+#completed-projects span {
+    color: green; 
+}
+
+#delayed-projects span {
+    color: red; 
+}
+div#container{
+    margin-left: 70px; /* Ajuste este valor conforme necessário para garantir que a tabela não fique atrás do menu */
+    z-index: 1; /* Defina um z-index menor para o contêiner da tabela */
+    overflow-x: auto;
+}
+.filters {
+    display: flex;
+    justify-content: flex-start; /* Alinha os filtros e a pesquisa para a esquerda */
+    margin: 20px 5%; /* Ajuste a margem lateral para 5% ou um valor um pouco maior */
+    flex-wrap: wrap; /* Permite que os filtros se movam para a próxima linha */
+}
+
+
+.filter, .search {
+    margin-left: 5px; /* Adiciona espaço entre os filtros e a pesquisa */
+}
+
+.search {
+    width: 25%; /* Ajuste a largura conforme necessário */
+}
+
+
+
+input, select {
+    width: 100%; 
+    padding: 8px; 
+    margin: 5px 0;
+    border: 1px solid #ccc; 
+    border-radius: 3px;
+    color: #888; 
+    text-align: left; 
+}
+
+select {
+    background-color: white; 
+}
+
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+th, td {
+    padding: 10px; 
+    border-top: 1px solid #ddd; 
+    border-bottom: 1px solid #ddd; 
+    border-left: none; 
+    border-right: none; 
+}
+
+th {
+    background-color: #28a745; 
+    color: white; 
+    font-weight: bold; 
+    text-align: center; 
+}
+
+td {
+    text-align: center; 
+}
+
+.button-container {
+    text-align: right; 
+    margin-top: 10px; 
+}
+
+.search-button {
+    background-color: #28a745; 
+    color: white; 
+    border: none; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+}
+
+.search-button:hover {
+    background-color: #218838; 
+}
+
+.progress-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 50px; 
+}
+
+.progress-container {
+    background-color: #ccc;
+    border-radius: 5px;
+    height: 10px; 
+    width: 100px; 
+    margin-right: 15px; 
+}
+
+.progress-bar {
+    background-color: green;
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.3s; 
+}
+
+span {
+    font-weight: bold; 
+    text-align: center; 
+    min-width: 30px; 
+    margin-right: 15px; 
+}
+
+.search-button {
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer; 
+    color: inherit; 
+    font-size: 16px; 
+    display: flex; 
+    align-items: center; 
+}
+
+.pagination {
+    display: flex;
+    overflow-x: auto;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se não houver espaço */
+    margin-top: 20px;
+}
+
+.pagination a {
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 5px; /* Margem para espaçamento entre os links */
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #45a049;
+}
+
+.pagination a.active {
+    background-color: #2e7d32;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+      h1 {
+        font-size: 1.5em; /* Ajuste o tamanho se necessário */
+    }
+
+    .cards {
+        justify-content: space-around; /* Alinha os cards lado a lado */
+
+    }
+
+    .card {
+        width: 45%; /* Largura maior em telas pequenas para manter lado a lado */
+        height: auto; /* Altura automática */
+        margin: 10px 0; /* Margem vertical entre os cards */
+    }
+
+    .filters {
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        align-items: center; 
+    }
+
+    .filter, .search {
+        width: 50%; 
+        margin: 5px 30px; 
+ }
+    .pagination {
+        margin-right: 1230px; /* Remove a margem esquerda em telas pequenas */
+        margin-top: 10px; /* Ajuste se necessário */
+    }
+    
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Ocupa 100% da largura */
+        height: auto; /* Altura automática */
+    }
+}
+}

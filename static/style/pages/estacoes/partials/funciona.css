@@ -1,22 +1,28 @@
 .funciona {
-    width: 100%;
-    min-height: 200px;
-    padding: 30px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px 0px;
+  width: 100%;
+  min-height: 200px;
+  padding: 30px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px 0px;
 }
 
 .funciona .titulo {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .funciona .paragrafo {
-    color: var(--preto);
-    font-size: 1em;
-    width: 95%;
-    text-align: center;
-    line-height: 1.6em;
+  color: var(--preto);
+  font-size: 1em;
+  width: 95%;
+  text-align: center;
+  line-height: 1.6em;
+}
+
+@media(max-width: 700px) {
+  .funciona .paragrafo {
+      font-size: 0.9em;
+  }
 }

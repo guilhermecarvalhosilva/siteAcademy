@@ -11,6 +11,8 @@
 
 .competencias .titulo {
     font-size: 1.5em;
+    width: 95%;
+    text-align: center;
 }
 
 .competencias .cards {
@@ -20,7 +22,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 0px 35px;
+    flex-wrap: wrap;
+    gap: 30px 35px;
 }
 
 .competencias .cards .card-item {
@@ -40,6 +43,7 @@
     font-size: 1.1em;
     font-weight: 600;
     width: 95%;
+    margin: auto;
     height: auto;
     text-align: center;
 }

@@ -7,6 +7,6 @@ app_name = "Core"
 urlpatterns = [
     path('sobre/', Sobre.as_view(), name='sobre'),
     path('contato/', Contato.as_view(), name='contato'),
-    path('estacoes/<int:pk>', DetalhesEstacaoView.as_view(), name='estacoes'),
+    path('estacao/<str:nome>/', DetalhesEstacaoView.as_view(), name='detalhes_estacao'),
     path('desenvolvedores/', Desenvolvedores.as_view(), name='desenvolvedores'),
 ]
