@@ -1,7 +1,7 @@
 from typing import Any
 from django.shortcuts import render
 from django.views.generic import TemplateView, DetailView
-from .models import Estacao, Paleta_Core, Servico, Beneficio, Imagens_equipe, Imagens_beneficios_core, Ideal_para
+from .models import *
 
 class Homepage(TemplateView):
     template_name = 'entrada/index.html'
@@ -19,13 +19,13 @@ class Contato(TemplateView):
 
 
 class DetalhesEstacaoView(DetailView):
-    model = Estacao
+    model = Estacoe
     template_name = 'estacoes/detalhes_estacao.html'
     context_object_name = 'estacao'
     
     def get_object(self):
         nome_estacao = self.kwargs.get('nome')
-        return Estacao.objects.get(nome=nome_estacao)
+        return Estacoe.objects.get(nome=nome_estacao)
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -34,8 +34,7 @@ class DetalhesEstacaoView(DetailView):
         estacao_atual = self.get_object()
         
         # Filtra os serviços que têm a mesma cor da estação
-        context['servicos'] = Servico.objects.filter(cor=estacao_atual.cor)[:3]
-        context['beneficios'] = Beneficio.objects.filter(cor=estacao_atual.cor)[:3]
+        context['beneficios'] = Imagens_Beneficios_Core.objects.filter(cor=estacao_atual.cor)[:3]
         
         return context
 
@@ -46,7 +45,7 @@ class TesteView(TemplateView):
     
     def get_object(self):
         nome_estacao = self.kwargs.get('nome')
-        return Estacao.objects.get(nome=nome_estacao)
+        return Estacoe.objects.get(nome=nome_estacao)
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -54,11 +53,9 @@ class TesteView(TemplateView):
         # Pega a estação atual
         estacao_atual = self.get_object()        
         # Carregar instâncias de cada modelo
-        context['estacoes'] = Estacao.objects.all()
-        context['servicos'] = Servico.objects.filter(cor=estacao_atual.cor)[:3]
-        context['beneficios'] = Beneficio.objects.filter(cor=estacao_atual.cor)[:3]
-        context['imagens_equipes'] = Imagens_equipe.objects.all()
-        context['imagens_beneficios_cores'] = Beneficio.objects.filter(cor=estacao_atual.cor)[:3]
-        context['ideais_para'] = Ideal_para.objects.all()
+        context['estacoes'] = Estacoe.objects.all()
+        context['img_equipes'] = Imagens_equipe.objects.all()
+        context['img_beneficios_cores'] = Imagens_Beneficios_Core.objects.filter(cor=estacao_atual.cor)[:3]
+        context['img_ideais_para'] = Imagens_Ideal_Para_Core.objects.all()
         
         return context

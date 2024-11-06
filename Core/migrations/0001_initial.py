@@ -14,12 +14,12 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Estacao',
+            name='Estacoe',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('nome', models.CharField(max_length=255)),
-                ('logo', models.ImageField(upload_to=Core.models.Estacao.gerar_rota)),
-                ('icon', models.ImageField(upload_to=Core.models.Estacao.gerar_rota_icon)),
+                ('logo', models.ImageField(upload_to=Core.models.Estacoe.gerar_rota)),
+                ('icon', models.ImageField(upload_to=Core.models.Estacoe.gerar_rota_icon)),
                 ('descricao_estacao', models.TextField(max_length=2000)),
                 ('texto_funcionamento', models.TextField(max_length=1000)),
                 ('servico1', models.CharField(max_length=100)),
@@ -50,7 +50,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('imagem', models.ImageField(upload_to=Core.models.Imagens_equipe.gerar_rota)),
                 ('alt', models.CharField(max_length=100)),
-                ('estacao', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Core.estacao')),
+                ('estacao', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Core.Estacoe')),
             ],
         ),
         migrations.CreateModel(
