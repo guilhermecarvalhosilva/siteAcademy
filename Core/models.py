@@ -10,7 +10,6 @@ class Paleta_Core(models.Model):
     cor_detalhes = models.CharField(max_length=7)
 
     def save(self, *args, **kwargs):
-        # Remove o '#' no início, caso exista
         if self.cor_principal.startswith('#'):
             self.cor_principal = self.cor_principal[1:]
         
@@ -19,15 +18,15 @@ class Paleta_Core(models.Model):
         
         super().save(*args, **kwargs)
 
-    
-
+    def __str__(self):
+        return self.nome
 
 
 class Imagens_Beneficios_Core(models.Model):
     cor = models.ForeignKey(Paleta_Core, on_delete=models.CASCADE)
-    alt = models.CharField(max_length=100)
     def gerar_rota(self, filename):
         return f'static/images/global/cores/{self.cor}/beneficios/{filename}'
+    alt = models.CharField(max_length=100)
 
 
     imagem = models.ImageField(upload_to=gerar_rota)
@@ -60,46 +59,25 @@ class Estacoe(models.Model):
         return f'static/images/estacoes/{self.nome}/icon/{filename}'
     icon = models.ImageField(upload_to=gerar_rota_icon)
     cor = models.ForeignKey(Paleta_Core, on_delete=models.CASCADE)
-    descricao_estacao = models.TextField(max_length=2000)
+    descricao_estacao = models.CharField(max_length=2000)
     texto_funcionamento = models.TextField(max_length=1000)
-    responsabilidade = models.TextField(max_length=1000)
+    Servico_1 = models.CharField(max_length=1000)
+    Servico_2 = models.CharField(max_length=1000)
+    Servico_3 = models.CharField(max_length=1000)
+    responsabilidade = models.CharField(max_length=1000)
+    Beneficios_1 = models.CharField(max_length=1000)
+    Beneficios_2 = models.CharField(max_length=1000)
+    Beneficios_3 = models.CharField(max_length=1000)
+    Ideal_para_1 = models.CharField(max_length=1000)
+    Ideal_para_2 = models.CharField(max_length=1000)
+    Ideal_para_3 = models.CharField(max_length=1000)
+    Competencia_1 = models.CharField(max_length=1000)
+    Competencia_2 = models.CharField(max_length=1000)
+    Competencia_3 = models.CharField(max_length=1000)
     
 
     def __str__(self):
         return self.nome
-
-
-class Texto_Ideal_para_Estacoe(models.Model):
-    estacao = models.ForeignKey(Estacoe, on_delete=models.CASCADE)
-    Ideal_para =models.CharField(max_length=100) 
-
-    def __str__(self):
-        return f'texto de Ideal para da estação {self.estacao}'
-
-
-class Texto_Beneficios_Estacoe(models.Model):
-    estacao = models.ForeignKey(Estacoe, on_delete=models.CASCADE)
-    beneficio = models.CharField(max_length=100)
-
-    def __str__(self):
-        return f'texto de beneficio da estação {self.estacao}'
-
-
-class Texto_Servicos_Estacoe(models.Model):
-    estacao = models.ForeignKey(Estacoe, on_delete=models.CASCADE)
-    servico = models.CharField(max_length=100)
-
-    def __str__(self):
-        return f'texto de servico da estação {self.estacao}'
-
-class Texto_Competencias_Estacoe(models.Model):
-    estacao = models.ForeignKey(Estacoe, on_delete=models.CASCADE)
-    competencia = models.CharField(max_length=100)
-
-    def __str__(self):
-        return f'texto de competencia da estação {self.estacao}' 
-
-
 
 
 class Imagens_equipe(models.Model):

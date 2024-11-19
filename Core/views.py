@@ -31,17 +31,20 @@ class DetalhesEstacaoView(DetailView):
         context = super().get_context_data(**kwargs)
         
         # Pega a estação atual
-        estacao_atual = self.get_object()
-        
-        # Filtra os serviços que têm a mesma cor da estação
-        context['beneficios'] = Imagens_Beneficios_Core.objects.filter(cor=estacao_atual.cor)[:3]
+        estacao_atual = self.get_object()        
+        # Carregar instâncias de cada modelo
+        context['estacoes'] = Estacoe.objects.all()
+        context['img_equipes'] = Imagens_equipe.objects.all()
+        context['img_beneficios_cores'] = Imagens_Beneficios_Core.objects.filter(cor=estacao_atual.cor)[:3]
+        context['img_ideais_para'] = Imagens_Ideal_Para_Core.objects.filter(cor=estacao_atual.cor)[:3]
+        context['teste'] = 1
         
         return context
 
     
 
-class TesteView(TemplateView):
-    template_name = 'entrada/teste.html'
+class Teste2View(TemplateView):
+    template_name = 'entrada/teste2.html'
     
     def get_object(self):
         nome_estacao = self.kwargs.get('nome')
