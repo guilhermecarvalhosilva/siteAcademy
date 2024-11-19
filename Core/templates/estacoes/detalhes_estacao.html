@@ -108,7 +108,13 @@
                         <div class="card-imagem">
                             <img src="{{ imagem_beneficio.imagem.url }}" alt="{{ imagem_beneficio.alt }}" class="imagem-item">
                         </div>
-                        <p class="card-paragrafo">Experiência Prática e Aplicação de Conhecimento</p>
+                        {% if forloop.counter == 1 %}
+                    <p class="paragrafo"> {{ estacao.Beneficios_1 }}</p>
+                    {% elif forloop.counter == 2 %}
+                    <p class="paragrafo">{{ estacao.Beneficios_2 }}</p>
+                    {% elif forloop.counter == 3 %}
+                    <p class="paragrafo">{{ estacao.Beneficios_3 }}</p>
+                    {% endif %}
                     </div>
                     {% endfor %}
                 </div>
@@ -139,7 +145,13 @@
                     <div class="card-imagem">
                         <img src="{{ ideal_para_item.imagem.url }}" alt="{{ ideal_para_item.alt }}" class="imagem-item">
                     </div>
-                    <p class="paragrafo">Pessoas criativas com uma olhar artistico para o mundo.</p>
+                    {% if forloop.counter == 1 %}
+                    <p class="paragrafo"> {{ estacao.Ideal_para_1 }}</p>
+                    {% elif forloop.counter == 2 %}
+                    <p class="paragrafo">{{ estacao.Ideal_para_2 }}</p>
+                    {% elif forloop.counter == 3 %}
+                    <p class="paragrafo">{{ estacao.Ideal_para_3 }}</p>
+                    {% endif %}
                 </div>
                 {% endfor %}
             </article>
@@ -148,17 +160,17 @@
         <section class="competencias">
             <h2 class="titulo" style="color: var(--roxo-claro);">Competências desenvolvidas</h2>
             <article class="cards">
+                {% for competencia in range_simulado %}
                 <div class="card-item" style="background-color: var(--roxo-claro); border: 5px solid var(--roxo-escuro);">
-                    <p class="card-paragrafo">Desenvolver aplicativos</p>
+                    {% if forloop.counter == 1 %}
+                    <p class="paragrafo">{{ estacao.Competencia_1 }}</p>
+                    {% elif forloop.counter == 2 %}
+                    <p class="paragrafo">{{ estacao.Competencia_2 }}</p>
+                    {% elif forloop.counter == 3 %}
+                    <p class="paragrafo">{{ estacao.Competencia_3 }}</p>
+                    {% endif %}
                 </div>
-
-                <div class="card-item" style="background-color: var(--roxo-claro); border: 5px solid var(--roxo-escuro);">
-                    <p class="card-paragrafo">Desenvolver aplicativos</p>
-                </div>
-
-                <div class="card-item" style="background-color: var(--roxo-claro); border: 5px solid var(--roxo-escuro);">
-                    <p class="card-paragrafo">Desenvolver aplicativos</p>
-                </div>
+                {% endfor %}
             </article>
         </section>
     </main>

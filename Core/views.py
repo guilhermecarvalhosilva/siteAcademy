@@ -37,7 +37,8 @@ class DetalhesEstacaoView(DetailView):
         context['img_equipes'] = Imagens_equipe.objects.all()
         context['img_beneficios_cores'] = Imagens_Beneficios_Core.objects.filter(cor=estacao_atual.cor)[:3]
         context['img_ideais_para'] = Imagens_Ideal_Para_Core.objects.filter(cor=estacao_atual.cor)[:3]
-        context['teste'] = 1
+        
+        context['range_simulado'] = range(1, 4)
         
         return context
 
