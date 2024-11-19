@@ -1,27 +1,26 @@
+{% extends 'bases\base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block head %}
     <link rel="stylesheet" href="{% static 'style\pages\estacoes\detalhes_estacao.css' %}">
-    <title>Estações - Academy</title>
     <style>
         /*Variaveis de cores*/
         
         {% for paleta_cor in paleta_cor_list %}
-
-            :root {
+        
+        :root {
             --font-padrao: "Poppins", sans-serif;
             --roxo-escuro: #{{ paleta_cor.cor_principal }};
             --roxo-claro: #{{ paleta_cor.cor_detalhes }};
         }
-
+        
         {% endfor %}
         /*Variaveis de cores*/
-    </style>
-</head>
-<body>
+        </style>
+{% endblock %}
+{% block title %}
+    {{estacoes.nome}} - Academy
+{% endblock %}
+{% block content %}
     <main>
         <section class="principal" style="background-color: var(--roxo-escuro);">
             <article class="escrita">
@@ -144,5 +143,6 @@
             </article>
         </section>
     </main>
-</body>
-</html>
+{% endblock %}
+{% block js %}
+{% endblock %}

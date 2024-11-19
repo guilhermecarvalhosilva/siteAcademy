@@ -64,7 +64,7 @@ class Estacoe(models.Model):
     Servico_1 = models.CharField(max_length=1000)
     Servico_2 = models.CharField(max_length=1000)
     Servico_3 = models.CharField(max_length=1000)
-    responsabilidade = models.CharField(max_length=1000)
+    responsabilidade = models.TextField(max_length=1000)
     Beneficios_1 = models.CharField(max_length=1000)
     Beneficios_2 = models.CharField(max_length=1000)
     Beneficios_3 = models.CharField(max_length=1000)
