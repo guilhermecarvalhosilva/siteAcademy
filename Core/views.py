@@ -35,7 +35,7 @@ class DetalhesEstacaoView(DetailView):
         # Carregar instâncias de cada modelo
         context['estacoes'] = Estacoe.objects.all()
         context['paleta_cor_list'] = Paleta_Core.objects.filter(nome=estacao_atual.cor)
-        context['img_equipes'] = Imagens_equipe.objects.all()
+        context['img_equipes'] = Imagens_equipe.objects.filter(estacao=estacao_atual)
         context['img_beneficios_cores'] = Imagens_Beneficios_Core.objects.filter(cor=estacao_atual.cor)[:3]
         context['img_ideais_para'] = Imagens_Ideal_Para_Core.objects.filter(cor=estacao_atual.cor)[:3]
         

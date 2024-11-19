@@ -82,11 +82,13 @@ class Estacoe(models.Model):
 
 class Imagens_equipe(models.Model):
     estacao = models.ForeignKey(Estacoe, on_delete=models.CASCADE)
+    
     def gerar_rota(self, filename):
         return f'static/images/estacoes/{self.estacao.nome}/equipe/{filename}'
+    
     imagem = models.ImageField(upload_to=gerar_rota)
     alt = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.estacao
-
+        # Retorna uma string representando a relação com a estação
+        return f"{self.alt} - Estação: {self.estacao}"
