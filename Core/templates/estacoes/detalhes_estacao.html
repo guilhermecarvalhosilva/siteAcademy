@@ -8,48 +8,20 @@
     <title>Estações - Academy</title>
     <style>
         /*Variaveis de cores*/
+        
+        {% for paleta_cor in paleta_cor_list %}
+
             :root {
             --font-padrao: "Poppins", sans-serif;
-            --branco: #fff;
-            --azul-escuro: #1D267D;
-            --azul-medio: #4276BD;
-            --azul-claro: #35BEF0;
-            --verde-escuro: #03A64A;
-            --verde-claro: #64FF1C;
-            --laranja-escuro: #F98439;
-            --laranja-claro: #F2B544;
-            --roxo-escuro: #4D49BF;
-            --roxo-claro: #BE53FF;
-            --cinza-claro: #A2A2A2;
-            --preto: #000;
+            --roxo-escuro: #{{ paleta_cor.cor_principal }};
+            --roxo-claro: #{{ paleta_cor.cor_detalhes }};
         }
+
+        {% endfor %}
         /*Variaveis de cores*/
     </style>
 </head>
 <body>
-    <header class="cabecalho">
-        <section class="logo">
-            <img src="../../src/images/global/logo-academy.png" alt="Logo Academy One" class="logo-item">
-        </section>
-
-        <section class="menu">
-            <nav class="menu-item">
-                <a href="#" class="item ativo">Home</a>
-                <a href="#" class="item">Sobre</a>
-                <a href="#" class="item">Mesas</a>
-                <a href="./src/pages/contato.html" class="item">Contato</a>
-            </nav>
-
-            <a href="#" class="botao">Entrar</a>
-        </section>
-
-        <section class="mobile" onclick="menuShow()">
-            <div class="mobile-item"></div>
-            <div class="mobile-item"></div>
-            <div class="mobile-item"></div>
-        </section>
-    </header>
-
     <main>
         <section class="principal" style="background-color: var(--roxo-escuro);">
             <article class="escrita">
@@ -174,13 +146,5 @@
             </article>
         </section>
     </main>
-
-    <footer class="rodape">
-        <section class="imagem">
-            <img src="../../src/images/global/logo-academy-footer.png" alt="logo academy one footer" class="imagem-item">
-        </section>
-    </footer>
-
-    <script src="../script/menuShow.js"></script> 
 </body>
 </html>
