@@ -55,7 +55,8 @@
 }
 
 .beneficios .card .beneficios-card .card-item {
-    max-width: 430px;
+    max-width: 380px;
+    width: 95%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -77,13 +78,13 @@
     height: 100%;
 }
 
-.beneficios .card .beneficios-card .card-item  .card-paragrafo {
+.beneficios .card .beneficios-card .card-item .card-paragrafo {
     width: 95%;
     height: auto;
     text-align: center;
     font-size: 0.9em;
     font-weight: 500;
-    
+
 }
 
 
