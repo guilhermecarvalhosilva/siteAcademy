@@ -1,10 +1,10 @@
 /*css variables*/
 :root {
     --body-bg-color: #dce4e3;
-    --green: #1D267D;
+    --green: #F6F6F6;
     --light-green: #8ed7c6;
     --light-grey: #dce4e3;
-    --text-color: #ffffff;
+    --text-color: #084236;
 }
 
 /*reset*/
@@ -28,38 +28,31 @@ input {
     background: none; 
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 li {
     list-style: none;
 }
 
 /*body*/
 body {
-    background-color: var(--body-bg-color);
-    color: var(--text-color); 
-    width: 100vw; 
-    height: auto; 
-    font-family: 'Poppins', sans-serif;
-    position: relative;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
 }
 
 
 /*navbar*/
 .navbar {
-    z-index: 2;
-    width: 80px;
-    max-width: 4rem;
-    background-color: var(--green);
+    z-index: 10; /* Aumente o z-index para garantir que o menu esteja acima */
+    width: 60px; 
     height: 100vh; 
+    background-color: var(--green);
     position: fixed;
+    top: 0; 
+    left: 0; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: all .3s ease;
+    transition: width 0.3s ease;
 }
 
 
@@ -78,13 +71,6 @@ body {
 
 .navbar .navbar-container .navbar-logo-div .navbar-toggler {
     transition: .2s ease-in-out;
-    
-}
-
-.navbar .navbar-container .navbar-logo-div .navbar-toggler .navbar-toggler-img {
-    width: 1.3rem;
-    
-    
 }
 
 .navbar .navbar-container .navbar-logo-div .navbar-toggler:hover {
@@ -140,16 +126,15 @@ body {
     font-weight: 500;
 }
 
-.logout-btn .logout-img {
-    width: 1.6rem;
-}
-
-img{
-    width: 7rem;
+.navbar-logo-div .img{
+    width: 10px;
 }
 .navbar .menu-list .menu-item .menu-link  .menu-icon{
     display: block;
-    width: 1.3rem;
+}
+
+.span {
+    color: black !important; 
 }
 
 .navbar .menu-list .menu-item  .menu-link .menu-link-text{   
@@ -163,11 +148,9 @@ img{
     opacity: .7;
 }
 
-
-
 /*user information div*/
 .navbar .user-container {
-    background-color: #1D267D; 
+    background-color: #F6F6F6; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -205,8 +188,7 @@ img{
 /*navbar.active*/
 /*navbar.active navbar*/
 .navbar.active {
-    width: 350px; 
-    max-width: 20%; 
+    width: 250px; /* Ajuste a largura quando ativada */
 }
 
 /*navbar.active logo*/
@@ -256,15 +238,19 @@ img{
 
 
 /*dashboard*/
-.dashboard { 
+.dashboard {
     width: auto;
-    height: auto; 
-    margin-left: 5rem;
+    height: auto;
+    margin-left: 15rem; /* Ajuste este valor conforme necessário */
 }
 
 .navbar.active + .dashboard {
-    margin-left: 22%; 
+    margin-left: -50%; /* Ajuste para dar espaço à navbar expandida */
 }
+
+
+
+
 
 
 

@@ -24,6 +24,7 @@ header {
 
 .cards {
     display: flex;
+
     justify-content: center; 
     margin-bottom: 20px;
     flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha */
@@ -134,17 +135,28 @@ td {
     border-radius: 5px; 
     cursor: pointer; 
     font-size: 16px; 
+    align-items: center;
 }
 
 .search-button:hover {
     background-color: #218838; 
+    transition: background-color 0.4s ease;
 }
 
-.progress-wrapper {
-    display: flex;
-    align-items: center;
-    margin-left: 50px; 
+.delete-button {
+    color: white; 
+    border: none; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
 }
+
+.delete-button:hover {
+    background-color: #ff0000; 
+    transition: background-color 0.4s ease;
+}
+
 
 .progress-container {
     background-color: #ccc;
@@ -234,15 +246,15 @@ span {
         margin: 5px 30px; 
  }
     .pagination {
-        margin-right: 1230px; /* Remove a margem esquerda em telas pequenas */
+        margin-right: : 1230px; /* Remove a margem esquerda em telas pequenas */
         margin-top: 10px; /* Ajuste se necessário */
     }
-    
 
 @media (max-width: 480px) {
     .card {
         width: 100%; /* Ocupa 100% da largura */
         height: auto; /* Altura automática */
     }
-}
+
+
 }
