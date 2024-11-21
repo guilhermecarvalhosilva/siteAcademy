@@ -249,5 +249,21 @@ projectSearchInput.addEventListener('input', (event) => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    // Seleciona o botão de toggler e o menu lateral
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbar = document.querySelector('.navbar');
+
+    if (navbarToggler && navbar) {
+        // Adiciona um evento de clique ao botão
+        navbarToggler.addEventListener('click', () => {
+            navbar.classList.toggle('active'); // Alterna a classe 'active' no menu lateral
+        });
+    } else {
+        console.error('Navbar toggler ou navbar não foram encontrados no DOM.');
+    }
+});
+
+
 </script>
 {% endblock %}
