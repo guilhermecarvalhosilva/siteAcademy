@@ -7,24 +7,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}{% endblock %}</title>
 
-        <!--fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
-
         <!--css-->
-        <link rel="stylesheet" href="{% static 'style\pages\dashboard\menu_lateral.css' %}">
         {% block head %}
         {% endblock %}
-
+        
+        {% block css %}
+        {% endblock %}
+        <link rel="stylesheet" href="{% static 'style\pages\dashboard\list_projects\menu.css' %}">
     </head>
     <body>
         <!--aside bar-->
-        <nav class="navbar">            
+        <nav class="navbar" style="background-color: #1D267D;">      
             <div class="navbar-container">
                 <!--logo div-->
                 <div class="navbar-logo-div">
-                    <a class="navbar-logo-link" href="#"><img class="navbar-logo-img" src="{% static 'images/global/logo_academy/logo-academy.png' %}" alt="logo"></a>
+                    <a class="navbar-logo-link" href="#"><img class="navbar-logo-img" src="{% static 'images\global\logo_academy\logo-academy.png' %}" alt="logo" width="170px"></a>
                     <button class="navbar-toggler"><img class="navbar-toggler-img" src="{% static 'images\pages\dashboard\index_dashboard\svg\menu.svg' %}" alt="menu-toggler"></button>
                 </div>
 
@@ -36,26 +33,25 @@
                     <li class="menu-item">                        
                         <a class="menu-link" href="#"> 
                             <img src="{% static 'images\pages\dashboard\index_dashboard\svg\grid.svg' %}" title="Dashboard" class="menu-icon" alt="grid">
-                            <span class="menu-link-text">Projetos</span>                            
+                            <span class="menu-link-text" style="color: white">Dashboard</span>                            
                         </a>
                     </li>
                     <li class="menu-item">                        
                         <a class="menu-link" class="menu-link" href="#">
                             <img src="{% static 'images\pages\dashboard\index_dashboard\svg\user.svg' %}" title="Clientes" class="menu-icon" alt="user">
-                            <span class="menu-link-text">Alunos
-                            </span>    
+                            <span class="menu-link-text" style="color: white">Alunos</span>    
                         </a>
                     </li>
                 </ul>
             </div>
 
             <!--div user info-->
-            <div class="user-container">
+            <div class="user-container" style="background-color: #1D267D;">
                 <div class="user-info">
                     <img class="user-img" src="" alt="photo">
                     <div class="user-details">
-                        <h5 class="user-name">Irley Vieira Maia</h5>
-                        <p class="user-occupation">Admin</p>
+                        <h5 class="user-name" style="color: white">Irley Vieira Maia</h5>
+                        <p class="user-occupation" style="color: white">Admin</p>
                     </div>
                 </div>
                 <a class="logout-btn" href="#">
@@ -63,10 +59,9 @@
                 </a>
             </div>
         </nav>
-        {% block content %}
-        {% endblock %}
-    </body>
+{% block content %}
+{% endblock %}
+</body>
 </html>
-<script src="{% static 'script\pages\dashboard\menu_lateral.js' %}" defer></script>
 {% block js %}
 {% endblock %}

@@ -1,67 +1,22 @@
+{% extends 'bases\menu_lateral.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Menu Lateral</title>
 
-        <!--css-->
-        <link rel="stylesheet" href="{% static 'style\pages\dashboard\list_projects\menu.css' %}">
-         <link rel="stylesheet" href="{% static 'style\pages\dashboard\list_projects\dashboard.css' %}">
 
-        <!--js-->
-        <script src="{%static 'script\pages\dashboard\list_projects\dashboard.js' %}" defer></script>
-    </head>
-    <body>
+{% block title %}
+    Lista de Projetos - AcademyOne
+{% endblock %}
+
+
+{% block head %}
+{% endblock %}
+
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'style\pages\dashboard\list_projects\dashboard.css' %}">
+{% endblock %}
         
-        <!--aside bar-->
-        <nav class="navbar" style="background-color: #1D267D;">      
-            <div class="navbar-container">
-                <!--logo div-->
-                <div class="navbar-logo-div">
-                    <a class="navbar-logo-link" href="#"><img class="navbar-logo-img" src="{% static 'images\global\logo_academy\logo-academy.png' %}" alt="logo" width="170px"></a>
-                    <button class="navbar-toggler"><img class="navbar-toggler-img" src="{% static 'images\pages\dashboard\index_dashboard\svg\menu.svg' %}" alt="menu-toggler"></button>
-                </div>
-
-                <!--search input-->
-               
-
-                <!--item list-->
-                <ul class="menu-list">   
-                    <li class="menu-item">                        
-                        <a class="menu-link" href="#"> 
-                            <img src="{% static 'images\pages\dashboard\index_dashboard\svg\grid.svg' %}" title="Dashboard" class="menu-icon" alt="grid">
-                            <span class="menu-link-text" style="color: white">Dashboard</span>                            
-                        </a>
-                    </li>
-                    <li class="menu-item">                        
-                        <a class="menu-link" class="menu-link" href="#">
-                            <img src="{% static 'images\pages\dashboard\index_dashboard\svg\user.svg' %}" title="Clientes" class="menu-icon" alt="user">
-                            <span class="menu-link-text" style="color: white">Alunos</span>    
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <!--div user info-->
-            <div class="user-container" style="background-color: #1D267D;">
-                <div class="user-info">
-                    <img class="user-img" src="" alt="photo">
-                    <div class="user-details">
-                        <h5 class="user-name" style="color: white">Irley Vieira Maia</h5>
-                        <p class="user-occupation" style="color: white">Admin</p>
-                    </div>
-                </div>
-                <a class="logout-btn" href="#">
-                    <img class="logout-img" src="{% static 'images\pages\dashboard\index_dashboard\svg\log-out.svg' %}" alt="logout">
-                </a>
-            </div>
-        </nav>
-
-        <!--dashboard-->
-        <header>
+{% block content %}
+<header>
     <div class="header-content">
         <img src="{% static 'static\images\global\logo_academy\logo-academy.png' %}" alt="Logo" class="logo"> <!-- Substitua pelo caminho da sua logo -->
         <h1>Controle de Projetos</h1>
@@ -110,6 +65,8 @@
         </tr>
     </thead>
     <tbody>
+
+
     <!-- começo de um projeto -->
         <tr>
             <td>3</td>
@@ -142,11 +99,118 @@
 </tr>
         <!-- fim de um projeto -->
 
+
+        
+        
+    <!-- começo de um projeto -->
+    <tr>
+        <td>3</td>
+        <td>Agulha</td>
+        <td>2000</td>
+        <td>Academy One</td>
+        <td>Mak</td>
+        <td>29/08/2024</td>
+        <td>07/10/2024</td>
+        <td>Andamento</td>
+        <td>Concluído</td>
+<td>
+<div class="progress-wrapper">
+    <div class="progress-container">
+        <div class="progress-bar" style="width: 50%;"></div>
+    </div>
+    <span>50%</span>
+</td>
+<td>
+    <button class="search-button" title="Pesquisar">
+            <img src="{% static 'images\pages\dashboard\index_dashboard\searche.png' %}" alt="" width="16px">
+    </button>
+</td>
+<td>
+    <button class="delete-button" title="Excluir">
+        <img src="{% static 'images/pages/dashboard/index_dashboard/trash.png' %}" alt="trash" width="16px">
+    </button>        
+</div>
+</td>
+</tr>
+    <!-- fim de um projeto -->
+
+
+
+    
+        
+    <!-- começo de um projeto -->
+    <tr>
+        <td>3</td>
+        <td>Celular</td>
+        <td>2000</td>
+        <td>Academy One</td>
+        <td>Mak</td>
+        <td>29/08/2024</td>
+        <td>07/10/2024</td>
+        <td>Andamento</td>
+        <td>Concluído</td>
+<td>
+<div class="progress-wrapper">
+    <div class="progress-container">
+        <div class="progress-bar" style="width: 50%;"></div>
+    </div>
+    <span>50%</span>
+</td>
+<td>
+    <button class="search-button" title="Pesquisar">
+            <img src="{% static 'images\pages\dashboard\index_dashboard\searche.png' %}" alt="" width="16px">
+    </button>
+</td>
+<td>
+    <button class="delete-button" title="Excluir">
+        <img src="{% static 'images/pages/dashboard/index_dashboard/trash.png' %}" alt="trash" width="16px">
+    </button>        
+</div>
+</td>
+</tr>
+    <!-- fim de um projeto -->
+
+
+
+    
+        
+    <!-- começo de um projeto -->
+    <tr>
+        <td>3</td>
+        <td>Água</td>
+        <td>2000</td>
+        <td>Academy One</td>
+        <td>Mak</td>
+        <td>29/08/2024</td>
+        <td>07/10/2024</td>
+        <td>Andamento</td>
+        <td>Concluído</td>
+<td>
+<div class="progress-wrapper">
+    <div class="progress-container">
+        <div class="progress-bar" style="width: 50%;"></div>
+    </div>
+    <span>50%</span>
+</td>
+<td>
+    <button class="search-button" title="Pesquisar">
+            <img src="{% static 'images\pages\dashboard\index_dashboard\searche.png' %}" alt="" width="16px">
+    </button>
+</td>
+<td>
+    <button class="delete-button" title="Excluir">
+        <img src="{% static 'images/pages/dashboard/index_dashboard/trash.png' %}" alt="trash" width="16px">
+    </button>        
+</div>
+</td>
+</tr>
+    <!-- fim de um projeto -->
+
 </tbody>
 </table>
 </div>
 <div class="pagination">
-    <a href="pagina1.html">1</a>
+    <a href="#paginador1">1</a>
     <a href="pagina2.html">2</a>
     <a href="pagina3.html">3</a>
     <a href="pagina4.html">4</a>
@@ -161,7 +225,29 @@
 
 
 
-
+{% endblock %}
 </main>
-    </body>
-</html>
+{% block js %}
+<script>
+// Seleciona os elementos necessários
+const projectSearchInput = document.getElementById('project-search');
+const tableRows = document.querySelectorAll('#container table tbody tr');
+
+// Adiciona o evento de entrada para capturar o valor digitado
+projectSearchInput.addEventListener('input', (event) => {
+    const searchValue = event.target.value.toLowerCase(); // Valor digitado no input (em minúsculas)
+    console.log('Valor atual do input:', searchValue);
+
+    // Filtra os projetos com base no valor do input
+    tableRows.forEach(row => {
+        const projectName = row.cells[1].textContent.toLowerCase(); // Obtém o nome do projeto na linha
+        if (projectName.includes(searchValue)) {
+            row.style.display = ''; // Mostra a linha
+        } else {
+            row.style.display = 'none'; // Esconde a linha
+        }
+    });
+});
+
+</script>
+{% endblock %}

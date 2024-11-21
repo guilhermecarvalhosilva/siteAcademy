@@ -75,7 +75,7 @@ div#container{
 
 
 .filter, .search {
-    margin-left: 5px; /* Adiciona espaço entre os filtros e a pesquisa */
+    margin-left: 10px; 
 }
 
 .search {
@@ -88,7 +88,7 @@ input, select {
     width: 100%; 
     padding: 8px; 
     margin: 5px 0;
-    border: 1px solid #ccc; 
+    border: 1px solid ; 
     border-radius: 3px;
     color: #888; 
     text-align: left; 

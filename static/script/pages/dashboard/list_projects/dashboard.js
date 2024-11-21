@@ -1,4 +1,6 @@
-//elements 
+//elements
+console.log("teste2"); 
+
 const btnToggler = window.document.querySelector(".navbar-toggler"); 
 const inputSearch = window.document.querySelector(".navbar-search"); 
 const navbar = window.document.querySelector(".navbar");
