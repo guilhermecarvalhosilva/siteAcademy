@@ -1,9 +1,8 @@
 from django.urls import path 
-from .views import List_estacao, Index_dashboard, Base
+from .views import IndexDashboardView, ListEstacaoView
 
 
 urlpatterns = [
-    path('', Index_dashboard.as_view(), name="index_estacao"),
-    path('listar_projetos/', List_estacao.as_view(), name="list_estacao"),
-    path('menu_lateral/', Base.as_view(), name="base"),
+    path('', IndexDashboardView.as_view(), name="index_estacao"),
+    path('listar_projetos/', ListEstacaoView.as_view(), name="list_estacao"),
 ]
