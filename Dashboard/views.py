@@ -1,35 +1,39 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import Projeto
+from Core.models import Estacoe
+from django.contrib.auth.mixins import LoginRequiredMixin
 
-class IndexDashboardView(ListView):
+# Protegendo views com LoginRequiredMixin
+class IndexDashboardView(LoginRequiredMixin, ListView):
     template_name = "index_dashboard.html"
     model = Projeto
     context_object_name = "projetos"
 
 
-class BaseView(ListView):
-    template_name = "bases/menu_lateral.html"
-    model = Projeto
-    context_object_name = "projetos"
-
-
-class ProjetoDetailView(DetailView):
-    model = Projeto
-    template_name = "projeto_detail.html"
-    context_object_name = "projeto"
-
-class ListEstacaoView(ListView):
-    template_name = "list_dashboard.html"
-    model = Projeto
-    context_object_name = "projetos_get"
-
+class DetalhesProjetosEstacoes(LoginRequiredMixin, DetailView):
+    model = Estacoe
+    template_name = 'list_dashboard.html'
+    context_object_name = 'estacao'
+    
+    def get_object(self):
+        nome_estacao = self.kwargs.get('nome')
+        return Estacoe.objects.get(nome=nome_estacao)
+    
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        queryset = self.get_queryset()
-        context['total_em_andamento'] = queryset.filter(status="Em_andamento").count()
-        context['stand_by'] = queryset.filter(status="Standy-by").count()
-        context['concluido'] = queryset.filter(fase="Concluido").count()
-        context['atrasado'] = queryset.filter(status="Atrasado").count()
-        return context
+        
+        # Estação atual
+        estacao_atual = self.get_object()
 
+        # Projetos associados à estação atual
+        projetos = Projeto.objects.filter(estacao_projeto=estacao_atual)
+
+        # Calcular os números de status e fases
+        context['projetos_get'] = projetos
+        context['total_em_andamento'] = projetos.filter(status="Em_andamento").count()
+        context['stand_by'] = projetos.filter(fase="Standy-by").count()
+        context['concluido'] = projetos.filter(fase="Concluido").count()
+        context['atrasado'] = projetos.filter(status="Atrasado").count()
+
+        return context

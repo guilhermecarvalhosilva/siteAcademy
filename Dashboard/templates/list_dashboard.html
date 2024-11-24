@@ -19,17 +19,22 @@
 <header>
     <div class="header-content">
         <img src="{% static 'static\images\global\logo_academy\logo-academy.png' %}" alt="Logo" class="logo"> <!-- Substitua pelo caminho da sua logo -->
-        <h1>Controle de Projetos</h1>
+       
+        {% if estacao.nome|length > 30 %}
+        <h1>Controle de Projetos - {{ estacao.nome|slice:"30" }} </h1>
+        {% else %}
+        <h1> Controle de Projetos - {{ estacao.nome }}</h1>
+        {% endif %}
     </div>
 </header>
 
 <main>
     <div class="cards">
         <div class="card" id="total-projects"><span>{{ projetos_get|length }}</span><br>Total</div>
-        <div class="card" id="ongoing-projects"><span>{{ total_em_andamento }}</span><br>Em Andamento</div>
-        <div class="card" id="standby-projects"><span>{{ stand_by }}</span><br>Stand-by</div>
-        <div class="card" id="completed-projects"><span>{{ concluido }}</span><br>Concluído</div>
-        <div class="card" id="delayed-projects"><span>{{ atrasado }}</span><br>Atrasado</div>
+        <div class="card" id="ongoing-projects"><span>{{ total_em_andamento }}</span><br>Em Andamento<br><span style="font-size: 15px;">status</span></div>
+        <div class="card" id="standby-projects"><span>{{ stand_by }}</span><br>Stand-by<br><span style="font-size: 15px;">fase</span></div>
+        <div class="card" id="completed-projects"><span>{{ concluido }}</span><br>Concluído<br><span style="font-size: 15px;">fase</span></div>
+        <div class="card" id="delayed-projects"><span>{{ atrasado }}</span><br>Atrasado<br><span style="font-size: 15px;">status</span></div>
     </div>
 
     <div class="filters">

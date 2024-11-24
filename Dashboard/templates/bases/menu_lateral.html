@@ -13,7 +13,7 @@
         
         {% block css %}
         {% endblock %}
-        <link rel="stylesheet" href="{% static 'style\pages\dashboard\list_projects\menu.css' %}">
+        <link rel="stylesheet" href="{% static 'style\pages\dashboard\menu.css' %}">
     </head>
     <body>
         <!--aside bar-->
@@ -64,62 +64,45 @@
 </body>
 </html>
 <script>
-    // Seleciona os elementos necessários
-    const projectSearchInput = document.getElementById('project-search');
-    const tableRows = document.querySelectorAll('#container table tbody tr');
-    
-    // Adiciona o evento de entrada para capturar o valor digitado
-    projectSearchInput.addEventListener('input', (event) => {
-        const searchValue = event.target.value.toLowerCase(); // Valor digitado no input (em minúsculas)
-        console.log('Valor atual do input:', searchValue);
-    
-        // Filtra os projetos com base no valor do input
-        tableRows.forEach(row => {
-            const projectName = row.cells[1].textContent.toLowerCase(); // Obtém o nome do projeto na linha
-            if (projectName.includes(searchValue)) {
-                row.style.display = ''; // Mostra a linha
-            } else {
-                row.style.display = 'none'; // Esconde a linha
+    document.addEventListener('DOMContentLoaded', () => {
+    // Seleciona o botão de toggler e o menu lateral
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbar = document.querySelector('.navbar');
+    const dashboard = document.querySelector('.dashboard'); // Painel principal para ajustar margens
+
+    if (navbarToggler && navbar) {
+        // Adiciona um evento de clique ao botão
+        navbarToggler.addEventListener('click', () => {
+            navbar.classList.toggle('active'); // Alterna a classe 'active' no menu lateral
+            
+            // Ajusta a margem do dashboard se ele existir
+            if (dashboard) {
+                if (navbar.classList.contains('active')) {
+                    dashboard.style.marginLeft = "250px"; // Ajuste de acordo com o valor na CSS
+                } else {
+                    dashboard.style.marginLeft = "60px"; // Valor padrão quando fechado
+                }
             }
         });
-    });
-    
-    document.addEventListener('DOMContentLoaded', () => {
-        // Seleciona o botão de toggler e o menu lateral
-        const navbarToggler = document.querySelector('.navbar-toggler');
-        const navbar = document.querySelector('.navbar');
-    
-        if (navbarToggler && navbar) {
-            // Adiciona um evento de clique ao botão
-            navbarToggler.addEventListener('click', () => {
-                navbar.classList.toggle('active'); // Alterna a classe 'active' no menu lateral
-            });
-        } else {
-            console.error('Navbar toggler ou navbar não foram encontrados no DOM.');
+    } else {
+        console.error('Navbar toggler ou navbar não foram encontrados no DOM.');
+    }
+
+    // Fecha o menu ao clicar fora dele (opcional, para uma melhor UX)
+    document.addEventListener('click', (event) => {
+        if (
+            navbar.classList.contains('active') &&
+            !navbar.contains(event.target) &&
+            !navbarToggler.contains(event.target)
+        ) {
+            navbar.classList.remove('active');
+            if (dashboard) {
+                dashboard.style.marginLeft = "60px"; // Retorna ao estado fechado
+            }
         }
     });
-    
-    // Seleciona o dropdown e as linhas da tabela
-    const projectFilter = document.getElementById('project-filter');
-    
-    // Adiciona o evento 'change' ao dropdown
-    projectFilter.addEventListener('change', (event) => {
-        const filterValue = event.target.value; // Obtém o valor selecionado
-        console.log('Filtro selecionado:', filterValue);
-    
-        // Filtra as linhas da tabela
-        tableRows.forEach(row => {
-            const status = row.cells[8].textContent.trim(); // Obtém o texto do status na linha
-            if (filterValue === "todos" || status === filterValue) {
-                row.style.display = ''; // Mostra a linha
-            } else {
-                row.style.display = 'none'; // Esconde a linha
-            }
-        });
-    });
-    
-    
-    
+});
+
 </script>
 {% block js %}
 {% endblock %}

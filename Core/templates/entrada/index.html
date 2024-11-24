@@ -1,37 +1,12 @@
+{% extends 'bases/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block head %}
     <link rel="stylesheet" href="{% static 'style/pages/index/index.css' %}">
-    <title>Academy One - Home</title>
-</head>
-<body>
-    <header class="cabecalho">
-        <section class="logo">
-            <img src="{% static 'images\global\logo_academy\logo-academy.png' %}" alt="Logo Academy One" class="logo-item">
-        </section>
-
-        <section class="menu">
-            <nav class="menu-item">
-                <a href="#" class="item ativo">Home</a>
-                <a href="#" class="item">Sobre</a>
-                <a href="#" class="item">Mesas</a>
-                <a href="./src/pages/contato.html" class="item">Contato</a>
-            </nav>
-
-            <a href="#" class="botao">Entrar</a>
-        </section>
-
-        <section class="mobile" onclick="menuShow()">
-            <div class="mobile-item"></div>
-            <div class="mobile-item"></div>
-            <div class="mobile-item"></div>
-        </section>
-    </header>
-
+{% endblock %}
+{% block title %}
+    Academy One - Home
+{% endblock %}
+{% block content %}
     <main class="conteudo">
         <section class="principal">
             <article class="escrita">
@@ -324,15 +299,6 @@
 
         
     </main>
-
-    <footer class="rodape">
-        <section class="imagem">
-            <img src="./src/images/global/logo-academy-footer.png" alt="logo academy one footer" class="imagem-item">
-        </section>
-    </footer>
-    
-    <script src="./src/script/global/menuShow.js"></script>
-    <script src="./src/script/pages/index/slider-depoimentos.js"></script>
-    <script src="./src/script/pages/index/slider-empresas.js"></script>
-</body>
-</html>
+{% endblock %}
+{% block js %}
+{% endblock %}

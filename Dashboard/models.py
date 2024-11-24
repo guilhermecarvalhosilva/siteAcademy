@@ -1,6 +1,7 @@
 import random
 from django.db import models
 from django.contrib.auth.models import User
+from Core.models import Estacoe
 
 def generate_random_number():
     return random.randint(1000000000, 9999999999)  
@@ -19,7 +20,8 @@ OPCOES_FASE = [
 ]
 
 class Projeto(models.Model):
-    id = models.BigIntegerField(unique=True, primary_key=True) 
+    estacao_projeto = models.ForeignKey(Estacoe, on_delete=models.CASCADE, null=True, blank=True) 
+    id = models.BigIntegerField(unique=True, primary_key=True, default=f"{generate_random_number}") 
     nome_projeto = models.CharField(max_length=255)
     numero_desafio = models.IntegerField(unique=True)
     Proprietario = models.CharField(max_length=200)

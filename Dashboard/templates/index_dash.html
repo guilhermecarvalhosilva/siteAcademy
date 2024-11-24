@@ -1,0 +1,36 @@
+{% extends 'bases/menu_lateral.html' %}
+{% load static %}
+
+{% block title %}
+Index Dashboard
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'style/pages/dashboard/index/index_dashboard.css' %}">
+{% endblock %}
+
+{% block content %}
+<main class="dashboard" style="margin-left: 100px;margin-right: 0px;">
+    <h1 class="title">PROJETOS</h1>
+    <p class="project" style="margin-top: 1px;">Dashboard responsável por gerenciar os melhores projetos</p>
+
+    <h2 class="titulo">Estações</h2>
+    <p class="texto">Clique na estação para visualizar seus projetos</p>
+
+    <div class="container">
+        <!-- Cards -->
+        {% for estacoes in estacoes_get %}
+        <div class="card">
+            <div class="circle">
+                <img src="{{ estacoes.logo.url }}" alt="" srcset="">
+            </div>
+            <h3 class="title">{{ estacoes.nome }}</h3>
+            <button class="btn">Analisar</button>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}
+
+{% block js %}
+{% endblock %}
