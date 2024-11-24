@@ -6,7 +6,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Protegendo views com LoginRequiredMixin
 class IndexDashboardView(LoginRequiredMixin, ListView):
-    template_name = "index_dashboard.html"
+    template_name = "index_dash.html"
     model = Projeto
     context_object_name = "projetos"
 
