@@ -28,7 +28,7 @@
             <nav class="menu-item">
                 <a href="{% url 'homepage' %}" class="item {% if request.path == '/' %}ativo{% endif %}">Home</a>
                 <a href="{% url 'Core:sobre' %}" class="item {% if request.path == '/core/sobre/' %}ativo{% endif %}">Sobre</a>
-                <a href="#" class="item">Devs</a>
+                <a href="{% url 'Core:desenvolvedores' %}" class="item {% if request.path == '/core/desenvolvedores/' %}ativo{% endif %}">Devs</a>
                 <a href="{% url 'Core:contato' %}" class="item {% if request.path == '/core/contato/' %}ativo{% endif %}">Contato</a>
             </nav>
             {% if not user.is_authenticated %}

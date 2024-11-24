@@ -1,38 +1,12 @@
+{% extends 'bases/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static '/style/pages/desenvolvedores/desenvolvedores.css' %}">
-    <title>Academy One - Depoimentos</title>
-</head>
-<body>
-    <header class="cabecalho">
-        <section class="logo">
-            <img src="{% static 'images\global\logo_academy\logo-academy.png' %}" alt="Logo Academy One" class="logo-item">
-        </section>
-
-        <section class="menu">
-            <nav class="menu-item">
-                <a href="{% url 'homepage' %}" class="item">Home</a>
-                <a href="#" class="item">Sobre</a>
-                <a href="#" class="item">Mesas</a>
-                <a href="{% url 'Core:contato' %}" class="item">Contato</a>
-                <a href="{% url 'Core:desenvolvedores' %}" class="item ativo">Desenvolvedores</a>
-            </nav>
-
-            <a href="#" class="botao">Entrar</a>
-        </section>
-
-        <section class="mobile" onclick="menuShow()">
-            <div class="mobile-item"></div>
-            <div class="mobile-item"></div>
-            <div class="mobile-item"></div>
-        </section>
-    </header>
-
+{% block head %}
+    <link rel="stylesheet" href="{% static 'style\pages\desenvolvedores\desenvolvedores.css' %}">
+{% endblock %}    
+{% block title %} 
+    Academy One - Depoimentos
+{% endblock %}
+{% block content %}
     <main class="conteudo-desenvolvedores">
         <section class="card-titulo">
             <h1 class="titulo-item">Desenvolvedores</h1>
@@ -132,7 +106,7 @@
         
          <div class="card">
                 <div class="card-image">
-                    <img src="{% static 'images\pages\desenvolvedores\imagem-giovani.jpg' %}" alt="Imagem de Perfil" class="imagem-item">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQHYKPVzqBVE2g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1705768276444?e=1738195200&v=beta&t=JJdaLorRDgHIKw_lKHYQu8A_xR1dAELOJi9ic9UNjO8" alt="Imagem de Perfil" class="imagem-item">
                 </div>
                 <p class="name">Giovani Dantas</p>
                 <p class="paragrafo">Back-end</p>
@@ -174,13 +148,7 @@
             </div>
         </section>
     </main>
+{% endblock %}
 
-    <footer class="rodape">
-        <section class="imagem">
-            <img src="{% static 'images\global\logo_academy\logo-academy.png' %}" alt="logo academy one footer" class="imagem-item">
-        </section>
-    </footer>
-
-    <script src="{% static '/script/global/menuShow.js' %}"></script>
-</body>
-</html>
+{% block js %}
+{% endblock %}
