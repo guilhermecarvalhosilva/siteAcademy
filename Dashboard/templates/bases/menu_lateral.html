@@ -21,7 +21,13 @@
             <div class="navbar-container">
                 <!--logo div-->
                 <div class="navbar-logo-div">
-                    <a class="navbar-logo-link" href="#"><img class="navbar-logo-img" src="{% static 'images\global\logo_academy\logo-academy.png' %}" alt="logo" width="170px"></a>
+
+                    {% if request.path == '/dashboard/' %}
+                    <a class="navbar-logo-link" href="{% url 'homepage' %}">
+                    {% else %}
+                    <a class="navbar-logo-link" href="{% url 'Dashboard:index_estacao' %}">
+                    {% endif %}
+                        <img class="navbar-logo-img" src="{% static 'images\global\logo_academy\logo-academy.png' %}" alt="logo" width="170px"></a>
                     <button class="navbar-toggler"><img class="navbar-toggler-img" src="{% static 'images\pages\dashboard\index_dashboard\svg\menu.svg' %}" alt="menu-toggler"></button>
                 </div>
 
@@ -50,11 +56,25 @@
                 <div class="user-info">
                     <img class="user-img" src="" alt="photo">
                     <div class="user-details">
-                        <h5 class="user-name" style="color: white">Irley Vieira Maia</h5>
+                        {% if request.user.get_full_name|length > 30 %}
+                        <h5 class="user-name" style="color: white">{{ request.user.get_full_name|slice:"30" }}</h5>
+                        {% else %}
+                        <h5 class="user-name" style="color: white">{{ request.user.get_full_name }}</h5>
+                        {% endif %}
+
+                        {% if request.user.is_staff and request.user.first_name == "Vanessa" %}
+                        <p class="user-occupation" style="color: white">Professora Van</p>
+                        {% elif request.user.is_superuser and request.user.first_name == "Mauro" %}
+                        <p class="user-occupation" style="color: white">Professor Mauro</p>
+                        {% elif request.user.is_staff %}
                         <p class="user-occupation" style="color: white">Admin</p>
+                        {% else %}
+                        <p class="user-occupation" style="color: white">{{ request.user.groups.all|join:", " }}</p>
+                        {% endif %}
+
                     </div>
                 </div>
-                <a class="logout-btn" href="#">
+                <a class="logout-btn" href="{% url 'account_logout' %}">
                     <img class="logout-img" src="{% static 'images\pages\dashboard\index_dashboard\svg\log-out.svg' %}" alt="logout">
                 </a>
             </div>
@@ -102,6 +122,7 @@
         }
     });
 });
+
 
 </script>
 {% block js %}

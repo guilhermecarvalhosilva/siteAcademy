@@ -1,6 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, DetailView, ListView
 from .models import *
+from django.contrib.auth.models import Group
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from .forms import CustomUserCreationForm
 
 class Homepage(ListView):
     template_name = 'entrada/index.html'
@@ -43,3 +47,27 @@ class DetalhesEstacaoView(DetailView):
         context['range_simulado'] = range(1, 4)
         
         return context
+    
+
+
+
+
+@login_required
+def add_user(request):
+    if request.method == 'POST':
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.save()
+            
+            # Adicionar o usuário ao grupo selecionado
+            group = form.cleaned_data.get('groups')
+            if group:
+                group.user_set.add(user)
+            
+            messages.success(request, f'Usuário {user.username} foi criado com sucesso!')
+            return redirect('some_view_name')  # Redirecione para uma página apropriada
+    else:
+        form = CustomUserCreationForm()
+
+    return render(request, 'entrada/add_user.html', {'form': form})

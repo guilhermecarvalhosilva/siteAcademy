@@ -7,8 +7,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 # Protegendo views com LoginRequiredMixin
 class IndexDashboardView(LoginRequiredMixin, ListView):
     template_name = "index_dash.html"
-    model = Projeto
-    context_object_name = "projetos"
+    model = Estacoe
+    context_object_name = "estacoes_get"
 
 
 class DetalhesProjetosEstacoes(LoginRequiredMixin, DetailView):

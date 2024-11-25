@@ -25,7 +25,9 @@ Index Dashboard
                 <img src="{{ estacoes.logo.url }}" alt="" srcset="">
             </div>
             <h3 class="title">{{ estacoes.nome }}</h3>
-            <button class="btn">Analisar</button>
+            <a href="{% url 'Dashboard:list_estacao' estacoes.nome %}">
+                <button class="btn">Analisar</button>
+            </a>
         </div>
         {% endfor %}
     </div>

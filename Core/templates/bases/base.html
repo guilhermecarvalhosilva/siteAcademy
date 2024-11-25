@@ -26,6 +26,9 @@
 
         <section class="menu">
             <nav class="menu-item">
+                {% if user.is_authenticated %}
+                <a href="{% url 'Dashboard:index_estacao' %}" class="item {% if request.path == '/core/dashboard/' %}ativo{% endif %}">Dashboard</a>
+                {% endif %}
                 <a href="{% url 'homepage' %}" class="item {% if request.path == '/' %}ativo{% endif %}">Home</a>
                 <a href="{% url 'Core:sobre' %}" class="item {% if request.path == '/core/sobre/' %}ativo{% endif %}">Sobre</a>
                 <a href="{% url 'Core:desenvolvedores' %}" class="item {% if request.path == '/core/desenvolvedores/' %}ativo{% endif %}">Devs</a>

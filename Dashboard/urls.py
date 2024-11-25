@@ -1,6 +1,7 @@
 from django.urls import path 
 from .views import IndexDashboardView, DetalhesProjetosEstacoes
 
+app_name = "Dashboard"
 
 urlpatterns = [
     path('', IndexDashboardView.as_view(), name="index_estacao"),
