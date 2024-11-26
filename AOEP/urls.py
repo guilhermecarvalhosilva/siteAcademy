@@ -21,9 +21,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
-app_name = "AOEP_root"
-
-
 urlpatterns = [
     #accounts_urls
     path('accounts/', include("allauth.urls")),

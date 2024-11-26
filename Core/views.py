@@ -50,24 +50,61 @@ class DetalhesEstacaoView(DetailView):
     
 
 
-
-
 @login_required
 def add_user(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
-            user.save()
-            
-            # Adicionar o usuário ao grupo selecionado
-            group = form.cleaned_data.get('groups')
-            if group:
-                group.user_set.add(user)
-            
-            messages.success(request, f'Usuário {user.username} foi criado com sucesso!')
-            return redirect('some_view_name')  # Redirecione para uma página apropriada
+            try:
+                user.save()
+
+                # Adicionar o usuário ao grupo selecionado
+                group = form.cleaned_data.get('groups')
+                if group:
+                    group.user_set.add(user)
+
+                messages.success(request, f'Usuário {user.username} foi criado com sucesso!')
+                return redirect('Core:sobre')  # Redirecione para uma página apropriada
+            except Exception as e:
+                messages.error(request, f'Ocorreu um erro ao salvar o usuário: {str(e)}')
+        else:
+            # Caso o formulário não seja válido, podemos passar os erros de forma mais específica
+            for field, errors in form.errors.items():
+                for error in errors:
+                    messages.error(request, f"Erro no campo {field}: {error}")
+
     else:
         form = CustomUserCreationForm()
 
     return render(request, 'entrada/add_user.html', {'form': form})
+
+
+
+@login_required
+def add_investidor(request):
+    if request.method == 'POST':
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            try:
+                user.save()
+
+                # Adicionar o usuário ao grupo selecionado
+                group = form.cleaned_data.get('groups')
+                if group:
+                    group.user_set.add(user)
+
+                messages.success(request, f'Investidor {user.username} foi criado com sucesso!')
+                return redirect('Core:sobre') 
+            except Exception as e:
+                messages.error(request, f'Ocorreu um erro ao salvar o investidor: {str(e)}')
+        else:
+            for field, errors in form.errors.items():
+                for error in errors:
+                    messages.error(request, f"Erro no campo {field}: {error}")
+
+    else:
+        form = CustomUserCreationForm()
+
+    return render(request, 'entrada/add_investidor.html', {'form': form})
