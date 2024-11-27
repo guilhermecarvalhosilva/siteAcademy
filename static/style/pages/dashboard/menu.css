@@ -138,6 +138,7 @@ body {
 }
 
 .navbar .menu-list .menu-item  .menu-link .menu-link-text{   
+    text-decoration: none;
     display: none;
     color: inherit; 
 }
@@ -224,6 +225,7 @@ body {
 
 .navbar.active .menu-list .menu-item  .menu-link .menu-link-text{   
     display: inline;
+    color: #1D267D;
 }
 
 /*navbar.active user container*/

@@ -118,7 +118,7 @@
         <span>{{ projetos.Progresso }}%</span>
 </td>
 <td>
-    <a href="">
+    <a href="{% url 'Dashboard:visualizar_detalhes' projetos.id %}">
         <button class="search-button" title="Pesquisar">
                 <img src="{% static 'images\pages\dashboard\index_dashboard\searche.png' %}" alt="" width="16px">
         </button>

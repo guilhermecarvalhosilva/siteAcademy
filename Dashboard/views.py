@@ -37,3 +37,18 @@ class DetalhesProjetosEstacoes(LoginRequiredMixin, DetailView):
         context['atrasado'] = projetos.filter(status="Atrasado").count()
 
         return context
+
+
+class Visualizar_Projeto_individual(LoginRequiredMixin, DetailView):
+    model = Projeto
+    template_name = 'detalhes_projeto_indv.html'
+    context_object_name = 'projeto'
+
+    def get_object(self):
+        projeto_id = self.kwargs.get('id')
+        return Projeto.objects.get(id=projeto_id)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['projeto'] = self.object  
+        return context
